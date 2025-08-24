@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RonilaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RonilaDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Logins" EntityType="RonilaDBModel.Login" />
+    <EntitySet Name="UnitInfoes" EntityType="RonilaDBModel.UnitInfo" />
+    <EntitySet Name="SupplierInfoes" EntityType="RonilaDBModel.SupplierInfo" />
+    <EntitySet Name="DefineStores" EntityType="RonilaDBModel.DefineStore" />
+    <EntitySet Name="CustomerInfoes" EntityType="RonilaDBModel.CustomerInfo" />
+    <EntitySet Name="DefineGoodsGroups" EntityType="RonilaDBModel.DefineGoodsGroup" />
+    <EntitySet Name="DefineGoods" EntityType="RonilaDBModel.DefineGood" />
+    <EntitySet Name="StoreInputs" EntityType="RonilaDBModel.StoreInput" />
+  </EntityContainer>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UnitInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="unitName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SupplierInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="supplierName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="supplierPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="supplierAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="supplierDisc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DefineStore">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="storeName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="storeDisc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customerName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="customerPhoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="customer_mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="customerAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="customerDisc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="customerBirthDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="customerNationalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReagentCode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DefineGoodsGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="storeId" Type="Int32" />
+    <Property Name="goodsGroupName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="goodsGroupDisc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DefineGood">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="goodsCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="goodsName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="goodsGroup" Type="Int32" />
+    <Property Name="goodsStore" Type="Int32" />
+    <Property Name="goodsUnit" Type="Int32" />
+    <Property Name="goodsDisc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="goodsMin" Type="Double" />
+    <Property Name="goodsMax" Type="Double" />
+    <Property Name="goosOrderPoint" Type="Double" />
+    <Property Name="goodsWeight" Type="Double" />
+    <Property Name="goodsPic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="StoreInput">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="storeInputDocNumber" Type="Int32" />
+    <Property Name="storeInputFactorNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputSupplierCode" Type="Int32" />
+    <Property Name="storeInputBuyDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputDisc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputGoodsCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputCount" Type="Double" />
+    <Property Name="storeInputBuyPrice" Type="Double" />
+    <Property Name="storeInputSellPrice" Type="Double" />
+    <Property Name="storeInputShamsiProductionDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputMiladiProductionDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputShamsiExpireDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputMiladiExpireDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="storeInputAlarmDay" Type="Int32" />
+    <Property Name="storeInputAlarmDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

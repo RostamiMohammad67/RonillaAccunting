@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\models\\dbservices\\storeinputservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:models\\dbservices\\storeinputservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 400,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StoreInputServices.cs",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\Models\\DBServices\\StoreInputServices.cs",
+              "RelativeDocumentMoniker": "Models\\DBServices\\StoreInputServices.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\Models\\DBServices\\StoreInputServices.cs",
+              "RelativeToolTip": "Models\\DBServices\\StoreInputServices.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwGQAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T19:34:18.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StoreInput.cs",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs",
+              "RelativeDocumentMoniker": "myForms\\StoreInput.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs*",
+              "RelativeToolTip": "myForms\\StoreInput.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T19:22:28.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StoreInput.cs [Design]",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs",
+              "RelativeDocumentMoniker": "myForms\\StoreInput.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs [Design]*",
+              "RelativeToolTip": "myForms\\StoreInput.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T19:22:26.308Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

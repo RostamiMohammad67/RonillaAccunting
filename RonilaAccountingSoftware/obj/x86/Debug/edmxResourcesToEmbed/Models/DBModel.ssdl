@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RonilaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customerName" Type="nvarchar" MaxLength="250" />
+    <Property Name="customerPhoneNumber" Type="nvarchar" MaxLength="11" />
+    <Property Name="customer_mobile" Type="nvarchar" MaxLength="11" />
+    <Property Name="customerAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="customerDisc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="customerBirthDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="customerNationalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReagentCode" Type="int" />
+  </EntityType>
+  <EntityType Name="DefineGoods">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="goodsCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="goodsName" Type="nvarchar" MaxLength="200" />
+    <Property Name="goodsGroup" Type="int" />
+    <Property Name="goodsStore" Type="int" />
+    <Property Name="goodsUnit" Type="int" />
+    <Property Name="goodsDisc" Type="nvarchar" MaxLength="500" />
+    <Property Name="goodsMin" Type="float" />
+    <Property Name="goodsMax" Type="float" />
+    <Property Name="goosOrderPoint" Type="float" />
+    <Property Name="goodsWeight" Type="float" />
+    <Property Name="goodsPic" Type="image" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="DefineGoodsGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storeId" Type="int" />
+    <Property Name="goodsGroupName" Type="nvarchar" MaxLength="200" />
+    <Property Name="goodsGroupDisc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DefineStore">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storeName" Type="nvarchar" MaxLength="200" />
+    <Property Name="storeDisc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StoreInput">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storeInputDocNumber" Type="int" />
+    <Property Name="storeInputFactorNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputSupplierCode" Type="int" />
+    <Property Name="storeInputBuyDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputDisc" Type="nvarchar" MaxLength="500" />
+    <Property Name="storeInputGoodsCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputCount" Type="float" />
+    <Property Name="storeInputBuyPrice" Type="float" />
+    <Property Name="storeInputSellPrice" Type="float" />
+    <Property Name="storeInputShamsiProductionDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputMiladiProductionDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputShamsiExpireDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputMiladiExpireDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeInputAlarmDay" Type="int" />
+    <Property Name="storeInputAlarmDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SupplierInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="supplierName" Type="nvarchar" MaxLength="250" />
+    <Property Name="supplierPhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="supplierAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="supplierDisc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UnitInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unitName" Type="nvarchar" MaxLength="100" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="RonilaDBModelStoreContainer">
+    <EntitySet Name="CustomerInfo" EntityType="Self.CustomerInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefineGoods" EntityType="Self.DefineGoods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefineGoodsGroup" EntityType="Self.DefineGoodsGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefineStore" EntityType="Self.DefineStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreInput" EntityType="Self.StoreInput" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierInfo" EntityType="Self.SupplierInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitInfo" EntityType="Self.UnitInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
