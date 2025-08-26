@@ -131,6 +131,7 @@
     <Compile Include="Models\UnitInfo.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\StoreInputDtO.cs" />
     <Compile Include="Models\ViewModel\SupplierDTO.cs" />
     <Compile Include="Models\ViewModel\CustomerDTO.cs" />
     <Compile Include="Models\ViewModel\DefineGoodsDTO.cs" />

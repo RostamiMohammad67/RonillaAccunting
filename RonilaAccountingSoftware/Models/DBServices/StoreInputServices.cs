@@ -1,4 +1,5 @@
-﻿using RonilaAccountingSoftware.myClass;
+﻿using RonilaAccountingSoftware.Models.ViewModel;
+using RonilaAccountingSoftware.myClass;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI.ImageEditor.Dialogs;
 
 namespace RonilaAccountingSoftware.Models.DBServices
 {
@@ -79,21 +81,205 @@ namespace RonilaAccountingSoftware.Models.DBServices
         {
             return db.StoreInputs.ToList();
         }
-        public List<Models.StoreInput> getDataById(int id)
+        public List<Models.ViewModel.StoreInputDtO> GetStoreFullData()
         {
-            return db.StoreInputs.Where(x => x.id == id).ToList();
+            return (from s in db.StoreInputs
+                    join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
+                    join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
+                    select new StoreInputDtO
+                    {
+                        id = s.id,
+                        storeInputDocNumber = s.storeInputDocNumber,
+                        storeInputFactorNumber = s.storeInputFactorNumber,
+                        storeInputSupplierCode = s.storeInputSupplierCode,
+                        storeInputBuyDate = s.storeInputBuyDate,
+                        storeInputDisc = s.storeInputDisc,
+                        storeInputGoodsCode = s.storeInputGoodsCode,
+                        storeInputCount = s.storeInputCount,
+                        storeInputBuyPrice = s.storeInputBuyPrice,
+                        storeInputSellPrice = s.storeInputSellPrice,
+                        storeInputShamsiProductionDate = s.storeInputShamsiProductionDate,
+                        storeInputMiladiProductionDate = s.storeInputMiladiProductionDate,
+                        storeInputShamsiExpireDate = s.storeInputShamsiExpireDate,
+                        storeInputMiladiExpireDate = s.storeInputMiladiExpireDate,
+                        storeInputAlarmDay = s.storeInputAlarmDay,
+                        storeInputAlarmDate = s.storeInputAlarmDate,
+                        userName = s.userName,
+                        timeStamp = s.timeStamp,
+                        supplierName = Sup.supplierName,
+                        goodsCode = g.goodsCode,
+                        goodsName = g.goodsName
+
+                    }).ToList();
         }
-        public List<Models.StoreInput> getDataByDocNumber(int docNumber)
+        public List<StoreInputDtO> getDataById(int id)
         {
-            return db.StoreInputs.Where(x => x.storeInputDocNumber == docNumber).ToList();
+            return (from s in db.StoreInputs
+                    join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
+                    join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
+                    where s.id == id
+                    select new StoreInputDtO
+                    {
+                        id = s.id,
+                        storeInputDocNumber = s.storeInputDocNumber,
+                        storeInputFactorNumber = s.storeInputFactorNumber,
+                        storeInputSupplierCode = s.storeInputSupplierCode,
+                        storeInputBuyDate = s.storeInputBuyDate,
+                        storeInputDisc = s.storeInputDisc,
+                        storeInputGoodsCode = s.storeInputGoodsCode,
+                        storeInputCount = s.storeInputCount,
+                        storeInputBuyPrice = s.storeInputBuyPrice,
+                        storeInputSellPrice = s.storeInputSellPrice,
+                        storeInputShamsiProductionDate = s.storeInputShamsiProductionDate,
+                        storeInputMiladiProductionDate = s.storeInputMiladiProductionDate,
+                        storeInputShamsiExpireDate = s.storeInputShamsiExpireDate,
+                        storeInputMiladiExpireDate = s.storeInputMiladiExpireDate,
+                        storeInputAlarmDay = s.storeInputAlarmDay,
+                        storeInputAlarmDate = s.storeInputAlarmDate,
+                        userName = s.userName,
+                        timeStamp = s.timeStamp,
+                        supplierName = Sup.supplierName,
+                        goodsCode = g.goodsCode,
+                        goodsName = g.goodsName
+
+                    }).ToList();
+        
         }
-        public List<Models.StoreInput> getDataByGoodsCode(string GoodsCode)
+        public List<StoreInputDtO> getDataByDocNumber(int storeInputDocNumber)
         {
-            return db.StoreInputs.Where(x => x.storeInputGoodsCode == GoodsCode).ToList();
+            return (from s in db.StoreInputs
+                    join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
+                    join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
+                    where s.storeInputDocNumber == storeInputDocNumber
+                    select new StoreInputDtO
+                    {
+                        id = s.id,
+                        storeInputDocNumber = s.storeInputDocNumber,
+                        storeInputFactorNumber = s.storeInputFactorNumber,
+                        storeInputSupplierCode = s.storeInputSupplierCode,
+                        storeInputBuyDate = s.storeInputBuyDate,
+                        storeInputDisc = s.storeInputDisc,
+                        storeInputGoodsCode = s.storeInputGoodsCode,
+                        storeInputCount = s.storeInputCount,
+                        storeInputBuyPrice = s.storeInputBuyPrice,
+                        storeInputSellPrice = s.storeInputSellPrice,
+                        storeInputShamsiProductionDate = s.storeInputShamsiProductionDate,
+                        storeInputMiladiProductionDate = s.storeInputMiladiProductionDate,
+                        storeInputShamsiExpireDate = s.storeInputShamsiExpireDate,
+                        storeInputMiladiExpireDate = s.storeInputMiladiExpireDate,
+                        storeInputAlarmDay = s.storeInputAlarmDay,
+                        storeInputAlarmDate = s.storeInputAlarmDate,
+                        userName = s.userName,
+                        timeStamp = s.timeStamp,
+                        supplierName = Sup.supplierName,
+                        goodsCode = g.goodsCode,
+                        goodsName = g.goodsName
+
+                    }).ToList();
+           // return db.StoreInputs.Where(x => x.storeInputDocNumber == docNumber).ToList();
+        }
+        public List<StoreInputDtO> getDataBySupplierFactorNumber(int SupplierCode, string factorNumber)
+        {
+            return (from s in db.StoreInputs
+                    join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
+                    join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
+                    where s.storeInputSupplierCode == SupplierCode && s.storeInputFactorNumber== factorNumber
+                    select new StoreInputDtO
+                    {
+                        id = s.id,
+                        storeInputDocNumber = s.storeInputDocNumber,
+                        storeInputFactorNumber = s.storeInputFactorNumber,
+                        storeInputSupplierCode = s.storeInputSupplierCode,
+                        storeInputBuyDate = s.storeInputBuyDate,
+                        storeInputDisc = s.storeInputDisc,
+                        storeInputGoodsCode = s.storeInputGoodsCode,
+                        storeInputCount = s.storeInputCount,
+                        storeInputBuyPrice = s.storeInputBuyPrice,
+                        storeInputSellPrice = s.storeInputSellPrice,
+                        storeInputShamsiProductionDate = s.storeInputShamsiProductionDate,
+                        storeInputMiladiProductionDate = s.storeInputMiladiProductionDate,
+                        storeInputShamsiExpireDate = s.storeInputShamsiExpireDate,
+                        storeInputMiladiExpireDate = s.storeInputMiladiExpireDate,
+                        storeInputAlarmDay = s.storeInputAlarmDay,
+                        storeInputAlarmDate = s.storeInputAlarmDate,
+                        userName = s.userName,
+                        timeStamp = s.timeStamp,
+                        supplierName = Sup.supplierName,
+                        goodsCode = g.goodsCode,
+                        goodsName = g.goodsName
+
+                    }).ToList();
+            //return db.StoreInputs.Where(x => x.storeInputSupplierCode == SupplierCode && x.storeInputFactorNumber == factorNumber).ToList();
+        }
+        public List<StoreInputDtO> getDataByGoodsCode(string GoodsCode)
+        {
+            return (from s in db.StoreInputs
+                    join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
+                    join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
+                    where s.storeInputGoodsCode == GoodsCode 
+                    select new StoreInputDtO
+                    {
+                        id = s.id,
+                        storeInputDocNumber = s.storeInputDocNumber,
+                        storeInputFactorNumber = s.storeInputFactorNumber,
+                        storeInputSupplierCode = s.storeInputSupplierCode,
+                        storeInputBuyDate = s.storeInputBuyDate,
+                        storeInputDisc = s.storeInputDisc,
+                        storeInputGoodsCode = s.storeInputGoodsCode,
+                        storeInputCount = s.storeInputCount,
+                        storeInputBuyPrice = s.storeInputBuyPrice,
+                        storeInputSellPrice = s.storeInputSellPrice,
+                        storeInputShamsiProductionDate = s.storeInputShamsiProductionDate,
+                        storeInputMiladiProductionDate = s.storeInputMiladiProductionDate,
+                        storeInputShamsiExpireDate = s.storeInputShamsiExpireDate,
+                        storeInputMiladiExpireDate = s.storeInputMiladiExpireDate,
+                        storeInputAlarmDay = s.storeInputAlarmDay,
+                        storeInputAlarmDate = s.storeInputAlarmDate,
+                        userName = s.userName,
+                        timeStamp = s.timeStamp,
+                        supplierName = Sup.supplierName,
+                        goodsCode = g.goodsCode,
+                        goodsName = g.goodsName
+
+                    }).ToList();
+            //return db.StoreInputs.Where(x => x.storeInputGoodsCode == GoodsCode).ToList();
+        }
+        public List<StoreInputDtO> getDataByDate(string start_date,string endDate)
+        {
+            return (from s in db.StoreInputs
+                    join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
+                    join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
+                    where (s.storeInputBuyDate.CompareTo(start_date)>=0 && s.storeInputBuyDate.CompareTo(endDate) <= 0)
+                    select new StoreInputDtO
+                    {
+                        id = s.id,
+                        storeInputDocNumber = s.storeInputDocNumber,
+                        storeInputFactorNumber = s.storeInputFactorNumber,
+                        storeInputSupplierCode = s.storeInputSupplierCode,
+                        storeInputBuyDate = s.storeInputBuyDate,
+                        storeInputDisc = s.storeInputDisc,
+                        storeInputGoodsCode = s.storeInputGoodsCode,
+                        storeInputCount = s.storeInputCount,
+                        storeInputBuyPrice = s.storeInputBuyPrice,
+                        storeInputSellPrice = s.storeInputSellPrice,
+                        storeInputShamsiProductionDate = s.storeInputShamsiProductionDate,
+                        storeInputMiladiProductionDate = s.storeInputMiladiProductionDate,
+                        storeInputShamsiExpireDate = s.storeInputShamsiExpireDate,
+                        storeInputMiladiExpireDate = s.storeInputMiladiExpireDate,
+                        storeInputAlarmDay = s.storeInputAlarmDay,
+                        storeInputAlarmDate = s.storeInputAlarmDate,
+                        userName = s.userName,
+                        timeStamp = s.timeStamp,
+                        supplierName = Sup.supplierName,
+                        goodsCode = g.goodsCode,
+                        goodsName = g.goodsName
+
+                    }).ToList();
+            //return db.StoreInputs.Where(x => x.storeInputGoodsCode == GoodsCode).ToList();
         }
         public int GetMaxId()
         {
-            int.TryParse(db.StoreInputs.Select(x=>(int?)x.id).Max().GetValueOrDefault().ToString(),out var maxValue);
+            int.TryParse(db.StoreInputs.Select(x => (int?)x.id).Max().GetValueOrDefault().ToString(), out var maxValue);
             return maxValue;
         }
         public int GetMaxDocNumber()
@@ -101,9 +287,9 @@ namespace RonilaAccountingSoftware.Models.DBServices
             int.TryParse(db.StoreInputs.Select(x => (int?)x.storeInputDocNumber).Max().GetValueOrDefault().ToString(), out var maxValue);
             return maxValue;
         }
-        public int GetMaxIdBySeller(int SupplierID)
+        public int GetMaxIdBySupplier(int SupplierID)
         {
-            int.TryParse(db.StoreInputs.Where(x=>x.storeInputSupplierCode==SupplierID).Select(x => (int?)x.id).Max().GetValueOrDefault().ToString(), out var maxValue);
+            int.TryParse(db.StoreInputs.Where(x => x.storeInputSupplierCode == SupplierID).Select(x => (int?)x.id).Max().GetValueOrDefault().ToString(), out var maxValue);
             return maxValue;
         }
     }

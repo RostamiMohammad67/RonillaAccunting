@@ -10,8 +10,6 @@ namespace RonilaAccountingSoftware.Models.ViewModel
     {
         public int id { get; set; }
         public string supplierName { get; set; }
-      
-       
-        
     }
+   
 }
