@@ -44,3 +44,5 @@ E:\Mohammad\Accounting\RonilaAccountingSoftware\obj\x86\Debug\RonilaAccountingSo
 E:\Mohammad\Accounting\RonilaAccountingSoftware\obj\x86\Debug\RonilaAccountingSoftware.myForms.DefineGoodsGroup.resources
 E:\Mohammad\Accounting\RonilaAccountingSoftware\obj\x86\Debug\RonilaAccountingSoftware.myForms.DefineGoods.resources
 E:\Mohammad\Accounting\RonilaAccountingSoftware\obj\x86\Debug\RonilaAccountingSoftware.myForms.StoreInput.resources
+E:\Mohammad\Accounting\RonilaAccountingSoftware\obj\x86\Debug\RonilaAccountingSoftware.myForms.ChakList.resources
+E:\Mohammad\Accounting\RonilaAccountingSoftware\obj\x86\Debug\RonilaAccountingSoftware.myForms.BankAccount.resources

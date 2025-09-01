@@ -384,5 +384,16 @@ namespace RonilaAccountingSoftware.myForms
 
 
         }
+
+        private void btn_newFactor_Click(object sender, EventArgs e)
+        {
+            DefineUnits_Load(sender, e);
+        }
+
+        private void btn_addCheck_Click(object sender, EventArgs e)
+        {
+            ChakList f=new ChakList();
+            f.ShowDialog();
+        }
     }
 }

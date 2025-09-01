@@ -11,8 +11,10 @@
         <EntityTypeShape EntityType="RonilaDBModel.DefineStore" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.CustomerInfo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.DefineGoodsGroup" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="RonilaDBModel.DefineGood" Width="1.5" PointX="5.375" PointY="2.75" />
-        <EntityTypeShape EntityType="RonilaDBModel.StoreInput" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RonilaDBModel.DefineGood" Width="1.5" PointX="4.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RonilaDBModel.StoreInput" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RonilaDBModel.DefineBankAccount" Width="2" PointX="4.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RonilaDBModel.DefineChakInfo" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

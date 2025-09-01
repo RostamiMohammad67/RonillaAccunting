@@ -118,5 +118,40 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="DefineBankAccounts">
+      <EntityTypeMapping TypeName="RonilaDBModel.DefineBankAccount">
+        <MappingFragment StoreEntitySet="DefineBankAccount">
+          <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="bandDisc" ColumnName="bandDisc" />
+          <ScalarProperty Name="bankShabaNumber" ColumnName="bankShabaNumber" />
+          <ScalarProperty Name="bankAccountNumber" ColumnName="bankAccountNumber" />
+          <ScalarProperty Name="bankCartNumber" ColumnName="bankCartNumber" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefineChakInfoes">
+      <EntityTypeMapping TypeName="RonilaDBModel.DefineChakInfo">
+        <MappingFragment StoreEntitySet="DefineChakInfo">
+          <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="chakDisc" ColumnName="chakDisc" />
+          <ScalarProperty Name="chakAlarmDate" ColumnName="chakAlarmDate" />
+          <ScalarProperty Name="chakAlarmDay" ColumnName="chakAlarmDay" />
+          <ScalarProperty Name="chakInFace" ColumnName="chakInFace" />
+          <ScalarProperty Name="chakBranch" ColumnName="chakBranch" />
+          <ScalarProperty Name="chakaccountNumberCode" ColumnName="chakaccountNumberCode" />
+          <ScalarProperty Name="chakPasDay" ColumnName="chakPasDay" />
+          <ScalarProperty Name="chakDateSodor" ColumnName="chakDateSodor" />
+          <ScalarProperty Name="chakPrice" ColumnName="chakPrice" />
+          <ScalarProperty Name="chakSerial" ColumnName="chakSerial" />
+          <ScalarProperty Name="chakNumSayadi" ColumnName="chakNumSayadi" />
+          <ScalarProperty Name="chakStoreInputDocNumber" ColumnName="chakStoreInputDocNumber" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

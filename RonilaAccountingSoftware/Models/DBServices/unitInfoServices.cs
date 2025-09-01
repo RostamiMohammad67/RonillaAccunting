@@ -28,6 +28,7 @@ namespace RonilaAccountingSoftware.Models.DBServices
             {
                 info[0].unitName = data.unitName;
                 info[0].userName = UtilityClass.Username;
+                info[0].timeStamp = fun.today();
 
                 db.SaveChanges();
                 return true;

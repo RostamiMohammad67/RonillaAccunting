@@ -16,6 +16,39 @@
     <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
     <Property Name="ReagentCode" Type="int" />
   </EntityType>
+  <EntityType Name="DefineBankAccount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="bankName" Type="nvarchar" MaxLength="200" />
+    <Property Name="bankCartNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankAccountNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="bankShabaNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="bandDisc" Type="nvarchar" MaxLength="500" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DefineChakInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="chakStoreInputDocNumber" Type="int" />
+    <Property Name="chakNumSayadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="chakSerial" Type="nvarchar" MaxLength="50" />
+    <Property Name="chakPrice" Type="float" />
+    <Property Name="chakDateSodor" Type="nvarchar" MaxLength="50" />
+    <Property Name="chakPasDay" Type="nvarchar" MaxLength="50" />
+    <Property Name="chakaccountNumberCode" Type="int" />
+    <Property Name="chakBranch" Type="nvarchar" MaxLength="200" />
+    <Property Name="chakInFace" Type="nvarchar" MaxLength="500" />
+    <Property Name="chakAlarmDay" Type="int" />
+    <Property Name="chakAlarmDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="chakDisc" Type="nvarchar" MaxLength="500" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="DefineGoods">
     <Key>
       <PropertyRef Name="id" />
@@ -111,6 +144,8 @@
   </EntityType>
   <EntityContainer Name="RonilaDBModelStoreContainer">
     <EntitySet Name="CustomerInfo" EntityType="Self.CustomerInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefineBankAccount" EntityType="Self.DefineBankAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DefineChakInfo" EntityType="Self.DefineChakInfo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DefineGoods" EntityType="Self.DefineGoods" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DefineGoodsGroup" EntityType="Self.DefineGoodsGroup" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DefineStore" EntityType="Self.DefineStore" Schema="dbo" store:Type="Tables" />

@@ -35,17 +35,18 @@
             this.menuSupplier = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuSeparatorItem3 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             this.menuCustomer = new Telerik.WinControls.UI.RadMenuItem();
+            this.menu_bankAccount = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.menu_defineStore = new Telerik.WinControls.UI.RadMenuItem();
             this.menu_goodsGroup = new Telerik.WinControls.UI.RadMenuItem();
             this.menu_DefineGoods = new Telerik.WinControls.UI.RadMenuItem();
+            this.menu_EnteGoodsToStore = new Telerik.WinControls.UI.RadMenuItem();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.lbl_user_name = new Telerik.WinControls.UI.RadLabelElement();
             this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.lbl_date = new Telerik.WinControls.UI.RadLabelElement();
-            this.menu_EnteGoodsToStore = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -56,6 +57,7 @@
             this.radMenuItem1.Font = new System.Drawing.Font("Tahoma", 9F);
             this.radMenuItem1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.menuUnitInfo,
+            this.menu_bankAccount,
             this.radMenuSeparatorItem1,
             this.menuSupplier,
             this.radMenuSeparatorItem3,
@@ -96,6 +98,12 @@
             this.menuCustomer.Name = "menuCustomer";
             this.menuCustomer.Text = "ثبت مشتری";
             this.menuCustomer.Click += new System.EventHandler(this.menuCustomer_Click);
+            // 
+            // menu_bankAccount
+            // 
+            this.menu_bankAccount.Name = "menu_bankAccount";
+            this.menu_bankAccount.Text = "حساب بانکی";
+            this.menu_bankAccount.Click += new System.EventHandler(this.menu_bankAccount_Click);
             // 
             // radMenu1
             // 
@@ -140,6 +148,12 @@
             this.menu_DefineGoods.Name = "menu_DefineGoods";
             this.menu_DefineGoods.Text = "تعریف کالا";
             this.menu_DefineGoods.Click += new System.EventHandler(this.menu_DefineGoods_Click);
+            // 
+            // menu_EnteGoodsToStore
+            // 
+            this.menu_EnteGoodsToStore.Name = "menu_EnteGoodsToStore";
+            this.menu_EnteGoodsToStore.Text = "ورود کالا به انبار";
+            this.menu_EnteGoodsToStore.Click += new System.EventHandler(this.menu_EnteGoodsToStore_Click);
             // 
             // radStatusStrip1
             // 
@@ -186,12 +200,6 @@
             this.lbl_date.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.lbl_date.TextWrap = true;
             // 
-            // menu_EnteGoodsToStore
-            // 
-            this.menu_EnteGoodsToStore.Name = "menu_EnteGoodsToStore";
-            this.menu_EnteGoodsToStore.Text = "ورود کالا به انبار";
-            this.menu_EnteGoodsToStore.Click += new System.EventHandler(this.menu_EnteGoodsToStore_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +245,6 @@
         private Telerik.WinControls.UI.RadMenuItem menu_goodsGroup;
         private Telerik.WinControls.UI.RadMenuItem menu_DefineGoods;
         private Telerik.WinControls.UI.RadMenuItem menu_EnteGoodsToStore;
+        private Telerik.WinControls.UI.RadMenuItem menu_bankAccount;
     }
 }

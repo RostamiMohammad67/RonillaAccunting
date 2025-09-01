@@ -33,5 +33,7 @@ namespace RonilaAccountingSoftware.Models
         public virtual DbSet<DefineGoodsGroup> DefineGoodsGroups { get; set; }
         public virtual DbSet<DefineGood> DefineGoods { get; set; }
         public virtual DbSet<StoreInput> StoreInputs { get; set; }
+        public virtual DbSet<DefineBankAccount> DefineBankAccounts { get; set; }
+        public virtual DbSet<DefineChakInfo> DefineChakInfoes { get; set; }
     }
 }

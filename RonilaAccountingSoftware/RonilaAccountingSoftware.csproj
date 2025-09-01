@@ -104,6 +104,7 @@
     <Compile Include="Models\CustomerInfo.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DBServices\ChakServices.cs" />
     <Compile Include="Models\DBServices\CustomersServices.cs" />
     <Compile Include="Models\DBServices\DefineGoodsGroupServices.cs" />
     <Compile Include="Models\DBServices\DefineGoodsServices.cs" />
@@ -112,7 +113,14 @@
     <Compile Include="Models\DBServices\StoreInputServices.cs" />
     <Compile Include="Models\DBServices\SuppliersServices.cs" />
     <Compile Include="Models\DBServices\DefineStoreServices.cs" />
+    <Compile Include="Models\DBServices\BankAccountServices.cs" />
     <Compile Include="Models\DBServices\unitInfoServices.cs" />
+    <Compile Include="Models\DefineBankAccount.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DefineChakInfo.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DefineGood.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -131,6 +139,7 @@
     <Compile Include="Models\UnitInfo.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\DefineChakInfoDTO.cs" />
     <Compile Include="Models\ViewModel\StoreInputDtO.cs" />
     <Compile Include="Models\ViewModel\SupplierDTO.cs" />
     <Compile Include="Models\ViewModel\CustomerDTO.cs" />
@@ -143,6 +152,18 @@
     </Compile>
     <Compile Include="myForms\DefineGoods.Designer.cs">
       <DependentUpon>DefineGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\ChakList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\ChakList.Designer.cs">
+      <DependentUpon>ChakList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\BankAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\BankAccount.Designer.cs">
+      <DependentUpon>BankAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="myForms\StoreInput.cs">
       <SubType>Form</SubType>
@@ -194,6 +215,12 @@
     </Compile>
     <EmbeddedResource Include="myForms\DefineGoods.resx">
       <DependentUpon>DefineGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\ChakList.resx">
+      <DependentUpon>ChakList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\BankAccount.resx">
+      <DependentUpon>BankAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="myForms\StoreInput.resx">
       <DependentUpon>StoreInput.cs</DependentUpon>

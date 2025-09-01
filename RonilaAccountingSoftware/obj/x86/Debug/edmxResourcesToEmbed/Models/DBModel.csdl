@@ -9,6 +9,8 @@
     <EntitySet Name="DefineGoodsGroups" EntityType="RonilaDBModel.DefineGoodsGroup" />
     <EntitySet Name="DefineGoods" EntityType="RonilaDBModel.DefineGood" />
     <EntitySet Name="StoreInputs" EntityType="RonilaDBModel.StoreInput" />
+    <EntitySet Name="DefineBankAccounts" EntityType="RonilaDBModel.DefineBankAccount" />
+    <EntitySet Name="DefineChakInfoes" EntityType="RonilaDBModel.DefineChakInfo" />
   </EntityContainer>
   <EntityType Name="Login">
     <Key>
@@ -116,6 +118,39 @@
     <Property Name="storeInputMiladiExpireDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="storeInputAlarmDay" Type="Int32" />
     <Property Name="storeInputAlarmDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DefineBankAccount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="bankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="bankCartNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bankAccountNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bankShabaNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bandDisc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timeStamp" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DefineChakInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="chakStoreInputDocNumber" Type="Int32" />
+    <Property Name="chakNumSayadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chakSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chakPrice" Type="Double" />
+    <Property Name="chakDateSodor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chakPasDay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chakaccountNumberCode" Type="Int32" />
+    <Property Name="chakBranch" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="chakInFace" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="chakAlarmDay" Type="Int32" />
+    <Property Name="chakAlarmDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chakDisc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>

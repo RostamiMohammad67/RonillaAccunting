@@ -21,6 +21,39 @@
           <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
           <Property Name="ReagentCode" Type="int" />
         </EntityType>
+        <EntityType Name="DefineBankAccount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="bankName" Type="nvarchar" MaxLength="200" />
+          <Property Name="bankCartNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankAccountNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="bankShabaNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="bandDisc" Type="nvarchar" MaxLength="500" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+          <Property Name="timeStamp" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="DefineChakInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="chakStoreInputDocNumber" Type="int" />
+          <Property Name="chakNumSayadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="chakSerial" Type="nvarchar" MaxLength="50" />
+          <Property Name="chakPrice" Type="float" />
+          <Property Name="chakDateSodor" Type="nvarchar" MaxLength="50" />
+          <Property Name="chakPasDay" Type="nvarchar" MaxLength="50" />
+          <Property Name="chakaccountNumberCode" Type="int" />
+          <Property Name="chakBranch" Type="nvarchar" MaxLength="200" />
+          <Property Name="chakInFace" Type="nvarchar" MaxLength="500" />
+          <Property Name="chakAlarmDay" Type="int" />
+          <Property Name="chakAlarmDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="chakDisc" Type="nvarchar" MaxLength="500" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+          <Property Name="timeStamp" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="DefineGoods">
           <Key>
             <PropertyRef Name="id" />
@@ -116,6 +149,8 @@
         </EntityType>
         <EntityContainer Name="RonilaDBModelStoreContainer">
           <EntitySet Name="CustomerInfo" EntityType="Self.CustomerInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DefineBankAccount" EntityType="Self.DefineBankAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DefineChakInfo" EntityType="Self.DefineChakInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DefineGoods" EntityType="Self.DefineGoods" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DefineGoodsGroup" EntityType="Self.DefineGoodsGroup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DefineStore" EntityType="Self.DefineStore" Schema="dbo" store:Type="Tables" />
@@ -137,6 +172,8 @@
           <EntitySet Name="DefineGoodsGroups" EntityType="RonilaDBModel.DefineGoodsGroup" />
           <EntitySet Name="DefineGoods" EntityType="RonilaDBModel.DefineGood" />
           <EntitySet Name="StoreInputs" EntityType="RonilaDBModel.StoreInput" />
+          <EntitySet Name="DefineBankAccounts" EntityType="RonilaDBModel.DefineBankAccount" />
+          <EntitySet Name="DefineChakInfoes" EntityType="RonilaDBModel.DefineChakInfo" />
         </EntityContainer>
         <EntityType Name="Login">
           <Key>
@@ -244,6 +281,39 @@
           <Property Name="storeInputMiladiExpireDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="storeInputAlarmDay" Type="Int32" />
           <Property Name="storeInputAlarmDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DefineBankAccount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="bankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="bankCartNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bankAccountNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bankShabaNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bandDisc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="timeStamp" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DefineChakInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="chakStoreInputDocNumber" Type="Int32" />
+          <Property Name="chakNumSayadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chakSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chakPrice" Type="Double" />
+          <Property Name="chakDateSodor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chakPasDay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chakaccountNumberCode" Type="Int32" />
+          <Property Name="chakBranch" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="chakInFace" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="chakAlarmDay" Type="Int32" />
+          <Property Name="chakAlarmDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chakDisc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -366,6 +436,41 @@
                 <ScalarProperty Name="storeInputSupplierCode" ColumnName="storeInputSupplierCode" />
                 <ScalarProperty Name="storeInputFactorNumber" ColumnName="storeInputFactorNumber" />
                 <ScalarProperty Name="storeInputDocNumber" ColumnName="storeInputDocNumber" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DefineBankAccounts">
+            <EntityTypeMapping TypeName="RonilaDBModel.DefineBankAccount">
+              <MappingFragment StoreEntitySet="DefineBankAccount">
+                <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="bandDisc" ColumnName="bandDisc" />
+                <ScalarProperty Name="bankShabaNumber" ColumnName="bankShabaNumber" />
+                <ScalarProperty Name="bankAccountNumber" ColumnName="bankAccountNumber" />
+                <ScalarProperty Name="bankCartNumber" ColumnName="bankCartNumber" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DefineChakInfoes">
+            <EntityTypeMapping TypeName="RonilaDBModel.DefineChakInfo">
+              <MappingFragment StoreEntitySet="DefineChakInfo">
+                <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="chakDisc" ColumnName="chakDisc" />
+                <ScalarProperty Name="chakAlarmDate" ColumnName="chakAlarmDate" />
+                <ScalarProperty Name="chakAlarmDay" ColumnName="chakAlarmDay" />
+                <ScalarProperty Name="chakInFace" ColumnName="chakInFace" />
+                <ScalarProperty Name="chakBranch" ColumnName="chakBranch" />
+                <ScalarProperty Name="chakaccountNumberCode" ColumnName="chakaccountNumberCode" />
+                <ScalarProperty Name="chakPasDay" ColumnName="chakPasDay" />
+                <ScalarProperty Name="chakDateSodor" ColumnName="chakDateSodor" />
+                <ScalarProperty Name="chakPrice" ColumnName="chakPrice" />
+                <ScalarProperty Name="chakSerial" ColumnName="chakSerial" />
+                <ScalarProperty Name="chakNumSayadi" ColumnName="chakNumSayadi" />
+                <ScalarProperty Name="chakStoreInputDocNumber" ColumnName="chakStoreInputDocNumber" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

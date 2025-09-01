@@ -83,5 +83,12 @@ namespace RonilaAccountingSoftware.myForms
             f.MdiParent = this;
             f.Show();
         }
+
+        private void menu_bankAccount_Click(object sender, EventArgs e)
+        {
+            BankAccount f = new BankAccount();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
