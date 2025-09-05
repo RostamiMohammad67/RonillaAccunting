@@ -38,6 +38,8 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -46,9 +48,6 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2022LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2022LightTheme();
@@ -57,19 +56,17 @@
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
             this.txt_Disc = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
-            this.txt_docNumber = new Telerik.WinControls.UI.RadTextBox();
             this.cbx_Supplier = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.txt_BuyDate = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.txt_addPercent = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.radLabel28 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_totalEarn = new Telerik.WinControls.UI.RadLabel();
             this.cbx_goodsName = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_totalSell = new Telerik.WinControls.UI.RadLabel();
             this.btn_newFactor = new Telerik.WinControls.UI.RadButton();
             this.btn_addCheck = new Telerik.WinControls.UI.RadButton();
             this.radLabel29 = new Telerik.WinControls.UI.RadLabel();
@@ -83,7 +80,7 @@
             this.btn_save = new Telerik.WinControls.UI.RadButton();
             this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
             this.txt_sellPrice = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_totalBuy = new Telerik.WinControls.UI.RadLabel();
             this.btn_refresh = new Telerik.WinControls.UI.RadButton();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.txt_shamsiProductionDate = new Telerik.WinControls.UI.RadMaskedEditBox();
@@ -106,21 +103,16 @@
             this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
             this.btn_showData = new Telerik.WinControls.UI.RadButton();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.txt_searchDocNumber = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
-            this.btn_searchDocNumber = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_factorNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Disc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_docNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_Supplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_Supplier.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_Supplier.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BuyDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
@@ -128,12 +120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_addPercent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_totalEarn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_goodsName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_goodsName.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_goodsName.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_totalSell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_newFactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_addCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).BeginInit();
@@ -147,7 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sellPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_totalBuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_refresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_shamsiProductionDate)).BeginInit();
@@ -170,9 +162,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_showData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_searchDocNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_searchDocNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,10 +172,8 @@
             this.radGroupBox1.Controls.Add(this.radLabel14);
             this.radGroupBox1.Controls.Add(this.txt_Disc);
             this.radGroupBox1.Controls.Add(this.radLabel18);
-            this.radGroupBox1.Controls.Add(this.txt_docNumber);
             this.radGroupBox1.Controls.Add(this.cbx_Supplier);
             this.radGroupBox1.Controls.Add(this.radLabel4);
-            this.radGroupBox1.Controls.Add(this.radLabel1);
             this.radGroupBox1.Controls.Add(this.txt_BuyDate);
             this.radGroupBox1.Controls.Add(this.radLabel6);
             this.radGroupBox1.Font = new System.Drawing.Font("Tahoma", 9F);
@@ -247,17 +234,6 @@
             this.radLabel18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel18.ThemeName = "VisualStudio2022Light";
             // 
-            // txt_docNumber
-            // 
-            this.txt_docNumber.Enabled = false;
-            this.txt_docNumber.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txt_docNumber.Location = new System.Drawing.Point(852, 21);
-            this.txt_docNumber.Name = "txt_docNumber";
-            this.txt_docNumber.Size = new System.Drawing.Size(82, 21);
-            this.txt_docNumber.TabIndex = 0;
-            this.txt_docNumber.ThemeName = "VisualStudio2022Light";
-            this.txt_docNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
-            // 
             // cbx_Supplier
             // 
             this.cbx_Supplier.AutoFilter = true;
@@ -287,34 +263,24 @@
             this.cbx_Supplier.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cbx_Supplier.Location = new System.Drawing.Point(456, 21);
             this.cbx_Supplier.Name = "cbx_Supplier";
-            this.cbx_Supplier.Size = new System.Drawing.Size(327, 21);
+            this.cbx_Supplier.Size = new System.Drawing.Size(478, 21);
             this.cbx_Supplier.TabIndex = 1;
             this.cbx_Supplier.TabStop = false;
             this.cbx_Supplier.ThemeName = "VisualStudio2022Light";
+            this.cbx_Supplier.SelectedIndexChanged += new System.EventHandler(this.cbx_Supplier_SelectedIndexChanged);
             this.cbx_Supplier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
             this.cbx_Supplier.Leave += new System.EventHandler(this.cbx_Supplier_Leave);
             // 
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel4.Location = new System.Drawing.Point(793, 24);
+            this.radLabel4.Location = new System.Drawing.Point(943, 21);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(55, 18);
             this.radLabel4.TabIndex = 11;
             this.radLabel4.Text = "فروشنده:";
             this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel4.ThemeName = "VisualStudio2022Light";
-            // 
-            // radLabel1
-            // 
-            this.radLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel1.Location = new System.Drawing.Point(937, 22);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(71, 18);
-            this.radLabel1.TabIndex = 8;
-            this.radLabel1.Text = "شماره سند:";
-            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel1.ThemeName = "VisualStudio2022Light";
             // 
             // txt_BuyDate
             // 
@@ -357,123 +323,125 @@
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "id";
-            gridViewTextBoxColumn1.HeaderText = "کد مشتری";
+            gridViewTextBoxColumn1.HeaderText = "شناسه";
+            gridViewTextBoxColumn1.IsVisible = false;
             gridViewTextBoxColumn1.Name = "id";
             gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn1.Width = 120;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "storeInputDocNumber";
-            gridViewTextBoxColumn2.HeaderText = "شماره سند";
-            gridViewTextBoxColumn2.Name = "storeInputDocNumber";
+            gridViewTextBoxColumn2.FieldName = "storeInputFactorNumber";
+            gridViewTextBoxColumn2.HeaderText = "شماره فاکتور";
+            gridViewTextBoxColumn2.Name = "storeInputFactorNumber";
             gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn2.Width = 100;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "storeInputFactorNumber";
-            gridViewTextBoxColumn3.HeaderText = "شماره فاکتور";
-            gridViewTextBoxColumn3.Name = "storeInputFactorNumber";
+            gridViewTextBoxColumn3.FieldName = "storeInputSupplierCode";
+            gridViewTextBoxColumn3.HeaderText = "کد تامین کننده";
+            gridViewTextBoxColumn3.IsVisible = false;
+            gridViewTextBoxColumn3.Name = "storeInputSupplierCode";
             gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn3.Width = 100;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "storeInputSupplierCode";
-            gridViewTextBoxColumn4.HeaderText = "کد فروشنده";
-            gridViewTextBoxColumn4.Name = "storeInputSupplierCode";
+            gridViewTextBoxColumn4.FieldName = "supplierName";
+            gridViewTextBoxColumn4.HeaderText = "نام تامین کننده";
+            gridViewTextBoxColumn4.Name = "supplierName";
             gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn4.Width = 100;
+            gridViewTextBoxColumn4.Width = 200;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "supplierName";
-            gridViewTextBoxColumn5.HeaderText = "نام تامین کننده";
-            gridViewTextBoxColumn5.Name = "supplierName";
+            gridViewTextBoxColumn5.FieldName = "storeInputBuyDate";
+            gridViewTextBoxColumn5.HeaderText = "تاریخ خرید";
+            gridViewTextBoxColumn5.Name = "storeInputBuyDate";
             gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn5.Width = 200;
+            gridViewTextBoxColumn5.Width = 100;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "storeInputBuyDate";
-            gridViewTextBoxColumn6.HeaderText = "تاریخ خرید";
-            gridViewTextBoxColumn6.Name = "storeInputBuyDate";
+            gridViewTextBoxColumn6.FieldName = "storeInputDisc";
+            gridViewTextBoxColumn6.HeaderText = "شرح فاکتور";
+            gridViewTextBoxColumn6.Name = "storeInputDisc";
             gridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn6.Width = 200;
             gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "storeInputDisc";
-            gridViewTextBoxColumn7.HeaderText = "شرح فاکتور";
-            gridViewTextBoxColumn7.Name = "storeInputDisc";
+            gridViewTextBoxColumn7.FieldName = "storeInputGoodsCode";
+            gridViewTextBoxColumn7.HeaderText = "کد کالا";
+            gridViewTextBoxColumn7.Name = "storeInputGoodsCode";
             gridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn7.Width = 200;
+            gridViewTextBoxColumn7.Width = 100;
             gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "storeInputGoodsCode";
-            gridViewTextBoxColumn8.HeaderText = "کد کالا";
-            gridViewTextBoxColumn8.Name = "storeInputGoodsCode";
+            gridViewTextBoxColumn8.FieldName = "goodsName";
+            gridViewTextBoxColumn8.HeaderText = "نام کالا";
+            gridViewTextBoxColumn8.Name = "goodsName";
             gridViewTextBoxColumn8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn8.Width = 100;
+            gridViewTextBoxColumn8.Width = 200;
             gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "goodsName";
-            gridViewTextBoxColumn9.HeaderText = "نام کالا";
-            gridViewTextBoxColumn9.Name = "goodsName";
+            gridViewTextBoxColumn9.FieldName = "storeInputCount";
+            gridViewTextBoxColumn9.HeaderText = "تعداد";
+            gridViewTextBoxColumn9.Name = "storeInputCount";
             gridViewTextBoxColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn9.Width = 200;
+            gridViewTextBoxColumn9.Width = 100;
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "storeInputBuyPrice";
+            gridViewDecimalColumn1.FormatString = "{0:n0}";
+            gridViewDecimalColumn1.HeaderText = "قیمت خرید";
+            gridViewDecimalColumn1.Name = "storeInputBuyPrice";
+            gridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDecimalColumn1.ThousandsSeparator = true;
+            gridViewDecimalColumn1.Width = 120;
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "storeInputSellPrice";
+            gridViewDecimalColumn2.FormatString = "{0:n0}";
+            gridViewDecimalColumn2.HeaderText = "قیمت فروش";
+            gridViewDecimalColumn2.Name = "storeInputSellPrice";
+            gridViewDecimalColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDecimalColumn2.ThousandsSeparator = true;
+            gridViewDecimalColumn2.Width = 120;
             gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "storeInputCount";
-            gridViewTextBoxColumn10.HeaderText = "تعداد";
-            gridViewTextBoxColumn10.Name = "storeInputCount";
+            gridViewTextBoxColumn10.FieldName = "storeInputShamsiProductionDate";
+            gridViewTextBoxColumn10.HeaderText = "تاریخ  تولید شمسی";
+            gridViewTextBoxColumn10.Name = "storeInputShamsiProductionDate";
             gridViewTextBoxColumn10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn10.Width = 100;
             gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "storeInputBuyPrice";
-            gridViewTextBoxColumn11.HeaderText = "قیمت خرید";
-            gridViewTextBoxColumn11.Name = "storeInputBuyPrice";
+            gridViewTextBoxColumn11.FieldName = "storeInputMiladiProductionDate";
+            gridViewTextBoxColumn11.HeaderText = "تاریخ تولید میلادی";
+            gridViewTextBoxColumn11.Name = "storeInputMiladiProductionDate";
+            gridViewTextBoxColumn11.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn11.Width = 100;
             gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "storeInputSellPrice";
-            gridViewTextBoxColumn12.HeaderText = "قیمت فروش";
-            gridViewTextBoxColumn12.Name = "storeInputSellPrice";
+            gridViewTextBoxColumn12.FieldName = "storeInputShamsiExpireDate";
+            gridViewTextBoxColumn12.HeaderText = "تاریخ انقضا شمسی";
+            gridViewTextBoxColumn12.Name = "storeInputShamsiExpireDate";
             gridViewTextBoxColumn12.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn12.Width = 100;
             gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "storeInputShamsiProductionDate";
-            gridViewTextBoxColumn13.HeaderText = "تاریخ  تولید شمسی";
-            gridViewTextBoxColumn13.Name = "storeInputShamsiProductionDate";
+            gridViewTextBoxColumn13.FieldName = "storeInputMiladiExpireDate";
+            gridViewTextBoxColumn13.HeaderText = "تاریخ انقضا میلادی";
+            gridViewTextBoxColumn13.Name = "storeInputMiladiExpireDate";
             gridViewTextBoxColumn13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn13.Width = 100;
             gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "storeInputMiladiProductionDate";
-            gridViewTextBoxColumn14.HeaderText = "تاریخ تولید میلادی";
-            gridViewTextBoxColumn14.Name = "storeInputMiladiProductionDate";
+            gridViewTextBoxColumn14.FieldName = "storeInputAlarmDay";
+            gridViewTextBoxColumn14.HeaderText = "آلارم قبل از انقضا";
+            gridViewTextBoxColumn14.Name = "storeInputAlarmDay";
             gridViewTextBoxColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn14.Width = 100;
             gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "storeInputShamsiExpireDate";
-            gridViewTextBoxColumn15.HeaderText = "تاریخ انقضا شمسی";
-            gridViewTextBoxColumn15.Name = "storeInputShamsiExpireDate";
+            gridViewTextBoxColumn15.FieldName = "storeInputAlarmDate";
+            gridViewTextBoxColumn15.HeaderText = "تاریخ آلارم";
+            gridViewTextBoxColumn15.Name = "storeInputAlarmDate";
             gridViewTextBoxColumn15.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn15.Width = 100;
             gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "storeInputMiladiExpireDate";
-            gridViewTextBoxColumn16.HeaderText = "تاریخ انقضا میلادی";
-            gridViewTextBoxColumn16.Name = "storeInputMiladiExpireDate";
+            gridViewTextBoxColumn16.FieldName = "userName";
+            gridViewTextBoxColumn16.HeaderText = "نام کاربری";
+            gridViewTextBoxColumn16.IsVisible = false;
+            gridViewTextBoxColumn16.Name = "userName";
             gridViewTextBoxColumn16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn16.Width = 100;
             gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.FieldName = "storeInputAlarmDay";
-            gridViewTextBoxColumn17.HeaderText = "آلارم قبل از انقضا";
-            gridViewTextBoxColumn17.Name = "storeInputAlarmDay";
+            gridViewTextBoxColumn17.FieldName = "timeStamp";
+            gridViewTextBoxColumn17.HeaderText = "زمان ثبت";
+            gridViewTextBoxColumn17.Name = "timeStamp";
             gridViewTextBoxColumn17.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn17.Width = 100;
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "storeInputAlarmDate";
-            gridViewTextBoxColumn18.HeaderText = "تاریخ آلارم";
-            gridViewTextBoxColumn18.Name = "storeInputAlarmDate";
-            gridViewTextBoxColumn18.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn18.Width = 100;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.FieldName = "userName";
-            gridViewTextBoxColumn19.HeaderText = "نام کاربری";
-            gridViewTextBoxColumn19.Name = "userName";
-            gridViewTextBoxColumn19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn19.Width = 100;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.FieldName = "timeStamp";
-            gridViewTextBoxColumn20.HeaderText = "رمز عبور";
-            gridViewTextBoxColumn20.Name = "timeStamp";
-            gridViewTextBoxColumn20.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn20.Width = 100;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -484,6 +452,8 @@
             gridViewTextBoxColumn7,
             gridViewTextBoxColumn8,
             gridViewTextBoxColumn9,
+            gridViewDecimalColumn1,
+            gridViewDecimalColumn2,
             gridViewTextBoxColumn10,
             gridViewTextBoxColumn11,
             gridViewTextBoxColumn12,
@@ -491,10 +461,7 @@
             gridViewTextBoxColumn14,
             gridViewTextBoxColumn15,
             gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20});
+            gridViewTextBoxColumn17});
             this.radGridView1.MasterTemplate.EnableFiltering = true;
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
@@ -509,10 +476,10 @@
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox2.Controls.Add(this.txt_addPercent);
-            this.radGroupBox2.Controls.Add(this.radLabel28);
+            this.radGroupBox2.Controls.Add(this.lbl_totalEarn);
             this.radGroupBox2.Controls.Add(this.cbx_goodsName);
             this.radGroupBox2.Controls.Add(this.radLabel19);
-            this.radGroupBox2.Controls.Add(this.radLabel26);
+            this.radGroupBox2.Controls.Add(this.lbl_totalSell);
             this.radGroupBox2.Controls.Add(this.btn_newFactor);
             this.radGroupBox2.Controls.Add(this.btn_addCheck);
             this.radGroupBox2.Controls.Add(this.radLabel29);
@@ -526,7 +493,7 @@
             this.radGroupBox2.Controls.Add(this.btn_save);
             this.radGroupBox2.Controls.Add(this.radLabel20);
             this.radGroupBox2.Controls.Add(this.txt_sellPrice);
-            this.radGroupBox2.Controls.Add(this.radLabel21);
+            this.radGroupBox2.Controls.Add(this.lbl_totalBuy);
             this.radGroupBox2.Controls.Add(this.btn_refresh);
             this.radGroupBox2.Controls.Add(this.radLabel5);
             this.radGroupBox2.Controls.Add(this.txt_shamsiProductionDate);
@@ -568,17 +535,17 @@
             this.txt_addPercent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
             this.txt_addPercent.Leave += new System.EventHandler(this.txt_addPercent_Leave);
             // 
-            // radLabel28
+            // lbl_totalEarn
             // 
-            this.radLabel28.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel28.ForeColor = System.Drawing.Color.OliveDrab;
-            this.radLabel28.Location = new System.Drawing.Point(653, 127);
-            this.radLabel28.Name = "radLabel28";
-            this.radLabel28.Size = new System.Drawing.Size(13, 18);
-            this.radLabel28.TabIndex = 63;
-            this.radLabel28.Text = "0";
-            this.radLabel28.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel28.ThemeName = "VisualStudio2022Light";
+            this.lbl_totalEarn.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbl_totalEarn.ForeColor = System.Drawing.Color.OliveDrab;
+            this.lbl_totalEarn.Location = new System.Drawing.Point(629, 127);
+            this.lbl_totalEarn.Name = "lbl_totalEarn";
+            this.lbl_totalEarn.Size = new System.Drawing.Size(13, 18);
+            this.lbl_totalEarn.TabIndex = 63;
+            this.lbl_totalEarn.Text = "0";
+            this.lbl_totalEarn.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_totalEarn.ThemeName = "VisualStudio2022Light";
             // 
             // cbx_goodsName
             // 
@@ -625,24 +592,24 @@
             this.radLabel19.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel19.ThemeName = "VisualStudio2022Light";
             // 
-            // radLabel26
+            // lbl_totalSell
             // 
-            this.radLabel26.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel26.ForeColor = System.Drawing.Color.Salmon;
-            this.radLabel26.Location = new System.Drawing.Point(848, 127);
-            this.radLabel26.Name = "radLabel26";
-            this.radLabel26.Size = new System.Drawing.Size(13, 18);
-            this.radLabel26.TabIndex = 63;
-            this.radLabel26.Text = "0";
-            this.radLabel26.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel26.ThemeName = "VisualStudio2022Light";
+            this.lbl_totalSell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbl_totalSell.ForeColor = System.Drawing.Color.Salmon;
+            this.lbl_totalSell.Location = new System.Drawing.Point(810, 127);
+            this.lbl_totalSell.Name = "lbl_totalSell";
+            this.lbl_totalSell.Size = new System.Drawing.Size(13, 18);
+            this.lbl_totalSell.TabIndex = 63;
+            this.lbl_totalSell.Text = "0";
+            this.lbl_totalSell.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_totalSell.ThemeName = "VisualStudio2022Light";
             // 
             // btn_newFactor
             // 
             this.btn_newFactor.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_newFactor.Image = global::RonilaAccountingSoftware.Properties.Resources.edit_24;
             this.btn_newFactor.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_newFactor.Location = new System.Drawing.Point(511, 110);
+            this.btn_newFactor.Location = new System.Drawing.Point(399, 110);
             this.btn_newFactor.Name = "btn_newFactor";
             this.btn_newFactor.Size = new System.Drawing.Size(92, 30);
             this.btn_newFactor.TabIndex = 16;
@@ -656,7 +623,7 @@
             this.btn_addCheck.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_addCheck.Image = global::RonilaAccountingSoftware.Properties.Resources.add_24;
             this.btn_addCheck.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_addCheck.Location = new System.Drawing.Point(397, 110);
+            this.btn_addCheck.Location = new System.Drawing.Point(497, 110);
             this.btn_addCheck.Name = "btn_addCheck";
             this.btn_addCheck.Size = new System.Drawing.Size(108, 30);
             this.btn_addCheck.TabIndex = 15;
@@ -670,9 +637,9 @@
             this.radLabel29.Font = new System.Drawing.Font("Tahoma", 9F);
             this.radLabel29.Location = new System.Drawing.Point(717, 127);
             this.radLabel29.Name = "radLabel29";
-            this.radLabel29.Size = new System.Drawing.Size(86, 18);
+            this.radLabel29.Size = new System.Drawing.Size(92, 18);
             this.radLabel29.TabIndex = 62;
-            this.radLabel29.Text = "سود کل فاکتور:";
+            this.radLabel29.Text = "سود مورد انتظار:";
             this.radLabel29.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel29.ThemeName = "VisualStudio2022Light";
             // 
@@ -704,11 +671,11 @@
             // radLabel27
             // 
             this.radLabel27.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel27.Location = new System.Drawing.Point(912, 127);
+            this.radLabel27.Location = new System.Drawing.Point(928, 127);
             this.radLabel27.Name = "radLabel27";
-            this.radLabel27.Size = new System.Drawing.Size(72, 18);
+            this.radLabel27.Size = new System.Drawing.Size(74, 18);
             this.radLabel27.TabIndex = 62;
-            this.radLabel27.Text = "قیمت فاکتور:";
+            this.radLabel27.Text = "قیمت فروش:";
             this.radLabel27.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel27.ThemeName = "VisualStudio2022Light";
             // 
@@ -781,7 +748,7 @@
             // radLabel20
             // 
             this.radLabel20.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel20.Location = new System.Drawing.Point(912, 103);
+            this.radLabel20.Location = new System.Drawing.Point(928, 103);
             this.radLabel20.Name = "radLabel20";
             this.radLabel20.Size = new System.Drawing.Size(79, 18);
             this.radLabel20.TabIndex = 58;
@@ -803,17 +770,17 @@
             this.txt_sellPrice.ThemeName = "VisualStudio2022Light";
             this.txt_sellPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
             // 
-            // radLabel21
+            // lbl_totalBuy
             // 
-            this.radLabel21.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel21.ForeColor = System.Drawing.Color.Salmon;
-            this.radLabel21.Location = new System.Drawing.Point(848, 103);
-            this.radLabel21.Name = "radLabel21";
-            this.radLabel21.Size = new System.Drawing.Size(13, 18);
-            this.radLabel21.TabIndex = 59;
-            this.radLabel21.Text = "0";
-            this.radLabel21.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel21.ThemeName = "VisualStudio2022Light";
+            this.lbl_totalBuy.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbl_totalBuy.ForeColor = System.Drawing.Color.Salmon;
+            this.lbl_totalBuy.Location = new System.Drawing.Point(810, 103);
+            this.lbl_totalBuy.Name = "lbl_totalBuy";
+            this.lbl_totalBuy.Size = new System.Drawing.Size(13, 18);
+            this.lbl_totalBuy.TabIndex = 59;
+            this.lbl_totalBuy.Text = "0";
+            this.lbl_totalBuy.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_totalBuy.ThemeName = "VisualStudio2022Light";
             // 
             // btn_refresh
             // 
@@ -854,6 +821,7 @@
             this.txt_shamsiProductionDate.Text = "____/__/__";
             this.txt_shamsiProductionDate.ThemeName = "VisualStudio2022Light";
             this.txt_shamsiProductionDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
+            this.txt_shamsiProductionDate.Click += new System.EventHandler(this.txt_shamsiProductionDate_Click);
             this.txt_shamsiProductionDate.Leave += new System.EventHandler(this.txt_shamsiProductionDate_Leave);
             // 
             // txt_miladiExpireDate
@@ -870,6 +838,7 @@
             this.txt_miladiExpireDate.Text = "____/__/__";
             this.txt_miladiExpireDate.ThemeName = "VisualStudio2022Light";
             this.txt_miladiExpireDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
+            this.txt_miladiExpireDate.Click += new System.EventHandler(this.txt_miladiExpireDate_Click);
             this.txt_miladiExpireDate.Leave += new System.EventHandler(this.txt_miladiExpireDate_Leave);
             // 
             // txt_shamsiExpireDate
@@ -886,6 +855,7 @@
             this.txt_shamsiExpireDate.Text = "____/__/__";
             this.txt_shamsiExpireDate.ThemeName = "VisualStudio2022Light";
             this.txt_shamsiExpireDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
+            this.txt_shamsiExpireDate.Click += new System.EventHandler(this.txt_shamsiExpireDate_Click);
             this.txt_shamsiExpireDate.Leave += new System.EventHandler(this.txt_shamsiExpireDate_Leave);
             // 
             // radLabel17
@@ -996,6 +966,7 @@
             this.txt_miladiProductionDate.Text = "____/__/__";
             this.txt_miladiProductionDate.ThemeName = "VisualStudio2022Light";
             this.txt_miladiProductionDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
+            this.txt_miladiProductionDate.Click += new System.EventHandler(this.txt_miladiProductionDate_Click);
             this.txt_miladiProductionDate.Leave += new System.EventHandler(this.txt_miladiProductionDate_Leave);
             // 
             // radLabel8
@@ -1034,7 +1005,7 @@
             // txt_fromDate
             // 
             this.txt_fromDate.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txt_fromDate.Location = new System.Drawing.Point(880, 255);
+            this.txt_fromDate.Location = new System.Drawing.Point(856, 255);
             this.txt_fromDate.Mask = "0000/00/00";
             this.txt_fromDate.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.txt_fromDate.Name = "txt_fromDate";
@@ -1049,7 +1020,7 @@
             // txt_toDate
             // 
             this.txt_toDate.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txt_toDate.Location = new System.Drawing.Point(747, 255);
+            this.txt_toDate.Location = new System.Drawing.Point(723, 255);
             this.txt_toDate.Mask = "0000/00/00";
             this.txt_toDate.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.txt_toDate.Name = "txt_toDate";
@@ -1064,7 +1035,7 @@
             // radLabel23
             // 
             this.radLabel23.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel23.Location = new System.Drawing.Point(834, 257);
+            this.radLabel23.Location = new System.Drawing.Point(810, 257);
             this.radLabel23.Name = "radLabel23";
             this.radLabel23.Size = new System.Drawing.Size(41, 18);
             this.radLabel23.TabIndex = 53;
@@ -1076,7 +1047,7 @@
             // 
             this.btn_showData.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_showData.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_showData.Location = new System.Drawing.Point(688, 254);
+            this.btn_showData.Location = new System.Drawing.Point(664, 254);
             this.btn_showData.Name = "btn_showData";
             this.btn_showData.Size = new System.Drawing.Size(56, 24);
             this.btn_showData.TabIndex = 54;
@@ -1088,7 +1059,7 @@
             // radLabel9
             // 
             this.radLabel9.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel9.Location = new System.Drawing.Point(968, 257);
+            this.radLabel9.Location = new System.Drawing.Point(945, 257);
             this.radLabel9.Name = "radLabel9";
             this.radLabel9.Size = new System.Drawing.Size(42, 18);
             this.radLabel9.TabIndex = 55;
@@ -1096,48 +1067,11 @@
             this.radLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radLabel9.ThemeName = "VisualStudio2022Light";
             // 
-            // txt_searchDocNumber
-            // 
-            this.txt_searchDocNumber.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txt_searchDocNumber.Location = new System.Drawing.Point(512, 256);
-            this.txt_searchDocNumber.Name = "txt_searchDocNumber";
-            this.txt_searchDocNumber.Size = new System.Drawing.Size(82, 21);
-            this.txt_searchDocNumber.TabIndex = 56;
-            this.txt_searchDocNumber.ThemeName = "VisualStudio2022Light";
-            this.txt_searchDocNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextTab);
-            // 
-            // radLabel12
-            // 
-            this.radLabel12.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel12.Location = new System.Drawing.Point(597, 257);
-            this.radLabel12.Name = "radLabel12";
-            this.radLabel12.Size = new System.Drawing.Size(67, 18);
-            this.radLabel12.TabIndex = 57;
-            this.radLabel12.Text = "شماره سند";
-            this.radLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.radLabel12.ThemeName = "VisualStudio2022Light";
-            // 
-            // btn_searchDocNumber
-            // 
-            this.btn_searchDocNumber.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.btn_searchDocNumber.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_searchDocNumber.Location = new System.Drawing.Point(443, 255);
-            this.btn_searchDocNumber.Name = "btn_searchDocNumber";
-            this.btn_searchDocNumber.Size = new System.Drawing.Size(56, 24);
-            this.btn_searchDocNumber.TabIndex = 58;
-            this.btn_searchDocNumber.Text = "نمایش";
-            this.btn_searchDocNumber.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_searchDocNumber.ThemeName = "VisualStudio2022Light";
-            this.btn_searchDocNumber.Click += new System.EventHandler(this.btn_searchDocNumber_Click);
-            // 
             // StoreInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 702);
-            this.Controls.Add(this.btn_searchDocNumber);
-            this.Controls.Add(this.txt_searchDocNumber);
-            this.Controls.Add(this.radLabel12);
+            this.ClientSize = new System.Drawing.Size(1016, 698);
             this.Controls.Add(this.radLabel9);
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.txt_fromDate);
@@ -1163,12 +1097,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Disc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_docNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_Supplier.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_Supplier.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_Supplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BuyDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
@@ -1177,12 +1109,12 @@
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_addPercent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_totalEarn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_goodsName.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_goodsName.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_goodsName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_totalSell)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_newFactor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_addCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).EndInit();
@@ -1196,7 +1128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_sellPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_totalBuy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_refresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_shamsiProductionDate)).EndInit();
@@ -1219,9 +1151,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_showData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_searchDocNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_searchDocNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1237,14 +1166,12 @@
         private Telerik.WinControls.UI.RadButton btn_save;
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private Telerik.WinControls.UI.RadButton btn_refresh;
-        private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadMaskedEditBox txt_BuyDate;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadMaskedEditBox txt_factorNumber;
         private Telerik.WinControls.UI.RadLabel radLabel14;
         private Telerik.WinControls.UI.RadMultiColumnComboBox cbx_Supplier;
-        private Telerik.WinControls.UI.RadTextBox txt_docNumber;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private Telerik.WinControls.UI.RadTextBox txt_goodsCode;
         private Telerik.WinControls.UI.RadMaskedEditBox txt_miladiProductionDate;
@@ -1278,15 +1205,12 @@
         private Telerik.WinControls.UI.RadMultiColumnComboBox cbx_goodsName;
         private Telerik.WinControls.UI.RadLabel radLabel19;
         private Telerik.WinControls.UI.RadLabel radLabel9;
-        private Telerik.WinControls.UI.RadLabel radLabel28;
-        private Telerik.WinControls.UI.RadLabel radLabel26;
+        private Telerik.WinControls.UI.RadLabel lbl_totalEarn;
+        private Telerik.WinControls.UI.RadLabel lbl_totalSell;
         private Telerik.WinControls.UI.RadLabel radLabel29;
         private Telerik.WinControls.UI.RadLabel radLabel27;
         private Telerik.WinControls.UI.RadLabel radLabel20;
-        private Telerik.WinControls.UI.RadLabel radLabel21;
+        private Telerik.WinControls.UI.RadLabel lbl_totalBuy;
         private Telerik.WinControls.UI.RadMaskedEditBox txt_addPercent;
-        private Telerik.WinControls.UI.RadTextBox txt_searchDocNumber;
-        private Telerik.WinControls.UI.RadLabel radLabel12;
-        private Telerik.WinControls.UI.RadButton btn_searchDocNumber;
     }
 }

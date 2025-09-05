@@ -9,7 +9,7 @@ namespace RonilaAccountingSoftware.Models.ViewModel
     internal class DefineChakInfoDTO
     {
         public int id { get; set; }
-        public Nullable<int> chakStoreInputDocNumber { get; set; }
+       
         public string chakNumSayadi { get; set; }
         public string chakSerial { get; set; }
         public Nullable<double> chakPrice { get; set; }

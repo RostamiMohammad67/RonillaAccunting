@@ -104,6 +104,7 @@
     <Compile Include="Models\CustomerInfo.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DBServices\StoreInfoServices.cs" />
     <Compile Include="Models\DBServices\ChakServices.cs" />
     <Compile Include="Models\DBServices\CustomersServices.cs" />
     <Compile Include="Models\DBServices\DefineGoodsGroupServices.cs" />
@@ -130,6 +131,9 @@
     <Compile Include="Models\DefineStore.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\StoreInfo.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\StoreInput.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -147,6 +151,12 @@
     <Compile Include="Models\ViewModel\DefineGoodsGroupDTO.cs" />
     <Compile Include="myClass\PersianRadGridLocalizationProvider.cs" />
     <Compile Include="myClass\UtilityClass.cs" />
+    <Compile Include="myForms\StoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\StoreInfo.Designer.cs">
+      <DependentUpon>StoreInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="myForms\DefineGoods.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +223,9 @@
     <Compile Include="myForms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="myForms\StoreInfo.resx">
+      <DependentUpon>StoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myForms\DefineGoods.resx">
       <DependentUpon>DefineGoods.cs</DependentUpon>
     </EmbeddedResource>

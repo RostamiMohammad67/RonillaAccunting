@@ -25,15 +25,16 @@ namespace RonilaAccountingSoftware.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<UnitInfo> UnitInfoes { get; set; }
-        public virtual DbSet<SupplierInfo> SupplierInfoes { get; set; }
         public virtual DbSet<DefineStore> DefineStores { get; set; }
         public virtual DbSet<CustomerInfo> CustomerInfoes { get; set; }
         public virtual DbSet<DefineGoodsGroup> DefineGoodsGroups { get; set; }
         public virtual DbSet<DefineGood> DefineGoods { get; set; }
         public virtual DbSet<StoreInput> StoreInputs { get; set; }
+        public virtual DbSet<SupplierInfo> SupplierInfoes { get; set; }
         public virtual DbSet<DefineBankAccount> DefineBankAccounts { get; set; }
         public virtual DbSet<DefineChakInfo> DefineChakInfoes { get; set; }
+        public virtual DbSet<Login> Logins { get; set; }
+        public virtual DbSet<StoreInfo> StoreInfoes { get; set; }
     }
 }

@@ -15,7 +15,8 @@ namespace RonilaAccountingSoftware.Models
     public partial class DefineChakInfo
     {
         public int id { get; set; }
-        public Nullable<int> chakStoreInputDocNumber { get; set; }
+        public Nullable<int> storeInputSupplierCode { get; set; }
+        public string storeInputFactorNumber { get; set; }
         public string chakNumSayadi { get; set; }
         public string chakSerial { get; set; }
         public Nullable<double> chakPrice { get; set; }

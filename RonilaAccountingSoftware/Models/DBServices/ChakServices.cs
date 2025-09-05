@@ -26,7 +26,7 @@ namespace RonilaAccountingSoftware.Models.DBServices
             var info = db.DefineChakInfoes.Where(x => x.id == data.id).ToList();
             if (info.Count > 0)
             {
-                info[0].chakStoreInputDocNumber = data.chakStoreInputDocNumber;
+                
                 info[0].chakNumSayadi =data.chakNumSayadi;
                 info[0].chakSerial =data.chakSerial;
                 info[0].chakPrice =data.chakPrice;
@@ -66,12 +66,13 @@ namespace RonilaAccountingSoftware.Models.DBServices
         public List<ViewModel.DefineChakInfoDTO> GetAllData()
         {
             var info = (from a in db.DefineChakInfoes
-                        join b in db.StoreInputs on a.chakStoreInputDocNumber equals b.storeInputDocNumber
+                        join b in db.StoreInputs on new
+                        { a.storeInputSupplierCode ,a.storeInputFactorNumber} equals new{ b.storeInputSupplierCode ,b.storeInputFactorNumber}
                         join c in db.DefineBankAccounts on a.chakaccountNumberCode equals c.id
                         select new ViewModel.DefineChakInfoDTO
                         {
                             id = a.id,
-                            chakStoreInputDocNumber = a.chakStoreInputDocNumber,
+                          
                             chakNumSayadi = a.chakNumSayadi,
                             chakSerial = a.chakSerial,
                             chakPrice = a.chakPrice,
@@ -95,13 +96,14 @@ namespace RonilaAccountingSoftware.Models.DBServices
         public List<ViewModel.DefineChakInfoDTO> getDataById(int id)
         {
             var info = (from a in db.DefineChakInfoes
-                        join b in db.StoreInputs on a.chakStoreInputDocNumber equals b.storeInputDocNumber
+                        join b in db.StoreInputs on new
+                        { a.storeInputSupplierCode, a.storeInputFactorNumber } equals new { b.storeInputSupplierCode, b.storeInputFactorNumber }
                         join c in db.DefineBankAccounts on a.chakaccountNumberCode equals c.id
                         where a.id==id
                         select new ViewModel.DefineChakInfoDTO
                         {
                             id = a.id,
-                            chakStoreInputDocNumber = a.chakStoreInputDocNumber,
+                            
                             chakNumSayadi = a.chakNumSayadi,
                             chakSerial = a.chakSerial,
                             chakPrice = a.chakPrice,
@@ -122,16 +124,18 @@ namespace RonilaAccountingSoftware.Models.DBServices
                         }).ToList();
             return info;
         }
-        public List<ViewModel.DefineChakInfoDTO> getDataByDocNumber(int docNumber)
+     
+        public List<ViewModel.DefineChakInfoDTO> getDataBySupplierAndFactorNumber(int supplierCode,string factorNumber)
         {
             var info = (from a in db.DefineChakInfoes
-                        join b in db.StoreInputs on a.chakStoreInputDocNumber equals b.storeInputDocNumber
+                        join b in db.StoreInputs on new
+                        { a.storeInputSupplierCode, a.storeInputFactorNumber } equals new { b.storeInputSupplierCode, b.storeInputFactorNumber }
                         join c in db.DefineBankAccounts on a.chakaccountNumberCode equals c.id
-                        where a.chakStoreInputDocNumber == docNumber
+                        where b.storeInputSupplierCode == supplierCode && b.storeInputFactorNumber == factorNumber
                         select new ViewModel.DefineChakInfoDTO
                         {
                             id = a.id,
-                            chakStoreInputDocNumber = a.chakStoreInputDocNumber,
+                           
                             chakNumSayadi = a.chakNumSayadi,
                             chakSerial = a.chakSerial,
                             chakPrice = a.chakPrice,
@@ -148,20 +152,21 @@ namespace RonilaAccountingSoftware.Models.DBServices
                             storeInputFactorNumber = b.storeInputFactorNumber,
                             storeInputSupplierCode = b.storeInputSupplierCode,
                             bankName = c.bankName,
-                            bankAccountNumber=c.bankAccountNumber
+                            bankAccountNumber = c.bankAccountNumber
                         }).ToList();
             return info;
         }
-        public List<ViewModel.DefineChakInfoDTO> getDataBySupplierAndFactorNumber(int supplierCode,string factorNumber)
+        public List<ViewModel.DefineChakInfoDTO> getDataBySupplierAndFactorNumber(int supplierCode)
         {
             var info = (from a in db.DefineChakInfoes
-                        join b in db.StoreInputs on a.chakStoreInputDocNumber equals b.storeInputDocNumber
+                        join b in db.StoreInputs on new
+                        { a.storeInputSupplierCode, a.storeInputFactorNumber } equals new { b.storeInputSupplierCode, b.storeInputFactorNumber }
                         join c in db.DefineBankAccounts on a.chakaccountNumberCode equals c.id
-                        where b.storeInputSupplierCode == supplierCode && b.storeInputFactorNumber == factorNumber
+                        where b.storeInputSupplierCode == supplierCode 
                         select new ViewModel.DefineChakInfoDTO
                         {
                             id = a.id,
-                            chakStoreInputDocNumber = a.chakStoreInputDocNumber,
+                            
                             chakNumSayadi = a.chakNumSayadi,
                             chakSerial = a.chakSerial,
                             chakPrice = a.chakPrice,

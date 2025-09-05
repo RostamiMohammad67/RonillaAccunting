@@ -1,34 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="RonilaDBModelStoreContainer" CdmEntityContainer="RonilaDBEntities">
-    <EntitySetMapping Name="Logins">
-      <EntityTypeMapping TypeName="RonilaDBModel.Login">
-        <MappingFragment StoreEntitySet="Login">
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="userName" ColumnName="userName" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="UnitInfoes">
       <EntityTypeMapping TypeName="RonilaDBModel.UnitInfo">
         <MappingFragment StoreEntitySet="UnitInfo">
           <ScalarProperty Name="userName" ColumnName="userName" />
           <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
           <ScalarProperty Name="unitName" ColumnName="unitName" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SupplierInfoes">
-      <EntityTypeMapping TypeName="RonilaDBModel.SupplierInfo">
-        <MappingFragment StoreEntitySet="SupplierInfo">
-          <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
-          <ScalarProperty Name="userName" ColumnName="userName" />
-          <ScalarProperty Name="supplierDisc" ColumnName="supplierDisc" />
-          <ScalarProperty Name="supplierAddress" ColumnName="supplierAddress" />
-          <ScalarProperty Name="supplierPhoneNumber" ColumnName="supplierPhoneNumber" />
-          <ScalarProperty Name="supplierName" ColumnName="supplierName" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -113,7 +91,23 @@
           <ScalarProperty Name="storeInputBuyDate" ColumnName="storeInputBuyDate" />
           <ScalarProperty Name="storeInputSupplierCode" ColumnName="storeInputSupplierCode" />
           <ScalarProperty Name="storeInputFactorNumber" ColumnName="storeInputFactorNumber" />
-          <ScalarProperty Name="storeInputDocNumber" ColumnName="storeInputDocNumber" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierInfoes">
+      <EntityTypeMapping TypeName="RonilaDBModel.SupplierInfo">
+        <MappingFragment StoreEntitySet="SupplierInfo">
+          <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="supplierDisc" ColumnName="supplierDisc" />
+          <ScalarProperty Name="supplierAddress" ColumnName="supplierAddress" />
+          <ScalarProperty Name="visitorPhoneNumber2" ColumnName="visitorPhoneNumber2" />
+          <ScalarProperty Name="visitorPhoneNumber" ColumnName="visitorPhoneNumber" />
+          <ScalarProperty Name="visitorName" ColumnName="visitorName" />
+          <ScalarProperty Name="supplierPhoneNumber2" ColumnName="supplierPhoneNumber2" />
+          <ScalarProperty Name="supplierPhoneNumber" ColumnName="supplierPhoneNumber" />
+          <ScalarProperty Name="supplierName" ColumnName="supplierName" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -148,7 +142,31 @@
           <ScalarProperty Name="chakPrice" ColumnName="chakPrice" />
           <ScalarProperty Name="chakSerial" ColumnName="chakSerial" />
           <ScalarProperty Name="chakNumSayadi" ColumnName="chakNumSayadi" />
-          <ScalarProperty Name="chakStoreInputDocNumber" ColumnName="chakStoreInputDocNumber" />
+          <ScalarProperty Name="storeInputFactorNumber" ColumnName="storeInputFactorNumber" />
+          <ScalarProperty Name="storeInputSupplierCode" ColumnName="storeInputSupplierCode" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="RonilaDBModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="displayName" ColumnName="displayName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreInfoes">
+      <EntityTypeMapping TypeName="RonilaDBModel.StoreInfo">
+        <MappingFragment StoreEntitySet="StoreInfo">
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="storeSlogan" ColumnName="storeSlogan" />
+          <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+          <ScalarProperty Name="storePhone" ColumnName="storePhone" />
+          <ScalarProperty Name="storeMob" ColumnName="storeMob" />
+          <ScalarProperty Name="storeName" ColumnName="storeName" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

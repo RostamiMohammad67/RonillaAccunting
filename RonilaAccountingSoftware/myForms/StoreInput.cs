@@ -27,17 +27,16 @@ namespace RonilaAccountingSoftware.myForms
         {
             InitializeComponent();
         }
-        public int CreateDocNumber()
-        {
-            return (_services.GetMaxDocNumber() + 1);
-        }
+
         public void BindGrid()
         {
-            int.TryParse(txt_docNumber.Text, out var doc_number);
-            radGridView1.DataSource = _services.getDataByDocNumber(doc_number);
+            int.TryParse(cbx_Supplier.SelectedValue.ToString(), out var supplierCode);
+            radGridView1.DataSource = _services.getDataBySupplierFactorNumber(supplierCode, txt_factorNumber.Text);
             txt_goodsCode.Focus();
             btn_delete.Enabled = btn_edit.Enabled = false;
             btn_save.Enabled = true;
+            //-------------------------
+            calcEarn();
         }
         public void ClearData()
         {
@@ -56,7 +55,8 @@ namespace RonilaAccountingSoftware.myForms
                 return false;
             }
 
-            if (txt_docNumber.Text != "" && txt_factorNumber.Text != "" && cbx_Supplier.SelectedIndex > -1
+
+            if (txt_factorNumber.Text != "" && cbx_Supplier.SelectedIndex > -1
                 && txt_goodsCode.Text != "" && cbx_goodsName.SelectedIndex > -1)
             {
 
@@ -68,9 +68,9 @@ namespace RonilaAccountingSoftware.myForms
         public Models.StoreInput Setdata()
         {
 
-            int.TryParse(txt_docNumber.Text, out var docNumber);
+
             int.TryParse(cbx_Supplier.SelectedValue.ToString(), out var SupplierCode);
-            double.TryParse(txt_count.ToString(), out var GoodsCount);
+            double.TryParse(txt_count.Text, out var GoodsCount);
             double.TryParse(txt_BuyPrice.Text, out var BuyPrice);
             double.TryParse(txt_sellPrice.Text, out var SellPrice);
             int.TryParse(txt_alarmDay.Text, out var alarmDay);
@@ -86,31 +86,31 @@ namespace RonilaAccountingSoftware.myForms
             string shamsi_p = "", miladi_p = "", shamsi_e = "", miladi_e = "";
             if (txt_shamsiProductionDate.Text.Contains("_")) { shamsi_p = txt_shamsiProductionDate.Text.Replace("_", "").Replace("/", ""); } else { shamsi_p = txt_shamsiProductionDate.Text; }
             if (txt_miladiProductionDate.Text.Contains("_")) { miladi_p = txt_miladiProductionDate.Text.Replace("_", "").Replace("/", ""); } else { miladi_p = txt_miladiProductionDate.Text; }
-            if (txt_shamsiExpireDate.Text.Contains("_")) { shamsi_e= txt_shamsiExpireDate.Text.Replace("_", "").Replace("/", ""); } else { shamsi_e = txt_shamsiExpireDate.Text; }
-            if (txt_miladiExpireDate.Text.Contains("_")) { miladi_e= txt_miladiExpireDate.Text.Replace("_", "").Replace("/", ""); } else { miladi_e = txt_miladiExpireDate.Text; }
+            if (txt_shamsiExpireDate.Text.Contains("_")) { shamsi_e = txt_shamsiExpireDate.Text.Replace("_", "").Replace("/", ""); } else { shamsi_e = txt_shamsiExpireDate.Text; }
+            if (txt_miladiExpireDate.Text.Contains("_")) { miladi_e = txt_miladiExpireDate.Text.Replace("_", "").Replace("/", ""); } else { miladi_e = txt_miladiExpireDate.Text; }
             var info = new Models.StoreInput
-                {
+            {
 
-                    storeInputDocNumber = docNumber,
-                    storeInputFactorNumber = txt_factorNumber.Text,
-                    storeInputSupplierCode = SupplierCode,
-                    storeInputBuyDate = txt_BuyDate.Text,
-                    storeInputDisc = txt_Disc.Text,
-                    storeInputGoodsCode = txt_goodsCode.Text,
-                    storeInputCount = GoodsCount,
-                    storeInputBuyPrice = BuyPrice,
-                    storeInputSellPrice = SellPrice,
-                    storeInputShamsiProductionDate = shamsi_p,
-                    storeInputMiladiProductionDate = miladi_p,
-                    storeInputShamsiExpireDate = shamsi_e,
-                    storeInputMiladiExpireDate = miladi_e,
-                    storeInputAlarmDay = alarmDay,
-                    storeInputAlarmDate = alarm_date,
-                    timeStamp = fun.TimeStamp(),
-                    userName = UtilityClass.Username,
-                    id = id,
 
-                };
+                storeInputFactorNumber = txt_factorNumber.Text,
+                storeInputSupplierCode = SupplierCode,
+                storeInputBuyDate = txt_BuyDate.Text,
+                storeInputDisc = txt_Disc.Text,
+                storeInputGoodsCode = txt_goodsCode.Text,
+                storeInputCount = GoodsCount,
+                storeInputBuyPrice = BuyPrice,
+                storeInputSellPrice = SellPrice,
+                storeInputShamsiProductionDate = shamsi_p,
+                storeInputMiladiProductionDate = miladi_p,
+                storeInputShamsiExpireDate = shamsi_e,
+                storeInputMiladiExpireDate = miladi_e,
+                storeInputAlarmDay = alarmDay,
+                storeInputAlarmDate = alarm_date,
+                timeStamp = fun.TimeStamp(),
+                userName = UtilityClass.Username,
+                id = id,
+
+            };
             return info;
         }
         private void btn_save_Click(object sender, EventArgs e)
@@ -174,12 +174,12 @@ namespace RonilaAccountingSoftware.myForms
             try
             {
                 id = Convert.ToInt32(radGridView1.CurrentRow.Cells["id"].Value.ToString());
-                txt_docNumber.Text = radGridView1.CurrentRow.Cells["storeInputDocNumber"].Value.ToString();
+
                 txt_factorNumber.Text = radGridView1.CurrentRow.Cells["storeInputFactorNumber"].Value.ToString();
-                int.TryParse(radGridView1.CurrentRow.Cells["storeInputSupplierCode"].Value.ToString(),out var storeInputSupplierCode);
+                int.TryParse(radGridView1.CurrentRow.Cells["storeInputSupplierCode"].Value.ToString(), out var storeInputSupplierCode);
                 cbx_Supplier.SelectedValue = storeInputSupplierCode;
-                
-                
+
+
                 txt_BuyDate.Text = radGridView1.CurrentRow.Cells["storeInputBuyDate"].Value.ToString();
                 txt_Disc.Text = radGridView1.CurrentRow.Cells["storeInputDisc"].Value.ToString();
                 txt_goodsCode.Text = radGridView1.CurrentRow.Cells["storeInputGoodsCode"].Value.ToString();
@@ -214,9 +214,8 @@ namespace RonilaAccountingSoftware.myForms
             //-------------------------------------------------
             txt_fromDate.Text = txt_toDate.Text = fun.today();
             cbx_Supplier.Focus();
-            //----------------------------------------------------------------
-            txt_docNumber.Text = CreateDocNumber().ToString();
-            BindGrid();
+
+
             //------------------------------------------------------------------
             cbx_Supplier.DataSource = _SupplierService.GetspecialColumn();
             cbx_Supplier.ValueMember = "id";
@@ -236,6 +235,7 @@ namespace RonilaAccountingSoftware.myForms
             cbx_Supplier.EditorControl.Columns["id"].Width = 80;
             cbx_Supplier.EditorControl.Columns["supplierName"].HeaderText = "نام فروشنده";
             cbx_Supplier.EditorControl.Columns["supplierName"].Width = 220;
+            cbx_Supplier_SelectedIndexChanged(sender, e);
             //------------------------------------------------------------------
             var goodsInfo = _GoodsService.GetspecialColumn();
             cbx_goodsName.DataSource = goodsInfo;
@@ -259,6 +259,8 @@ namespace RonilaAccountingSoftware.myForms
             cbx_goodsName.EditorControl.Columns["goodsName"].Width = 220;
             //----------------------------------------------------------------------
             txt_BuyDate.Text = fun.today();
+            //----------------------------------------------------------------
+            BindGrid();
 
         }
 
@@ -359,16 +361,35 @@ namespace RonilaAccountingSoftware.myForms
             }
         }
 
-        private void btn_searchDocNumber_Click(object sender, EventArgs e)
-        {
-            int.TryParse(txt_searchDocNumber.Text, out var docNumber);
-            radGridView1.DataSource = _services.getDataByDocNumber(docNumber);
-        }
+
 
         private void txt_factorNumber_Leave(object sender, EventArgs e)
         {
-            int.TryParse(cbx_Supplier.SelectedValue.ToString(), out var SupplierCode);
-            radGridView1.DataSource = _services.getDataBySupplierFactorNumber(SupplierCode, txt_factorNumber.Text);
+            try
+            {
+                int.TryParse(cbx_Supplier.SelectedValue.ToString(), out var SupplierCode);
+                var res = _services.getDataBySupplierFactorNumber(SupplierCode, txt_factorNumber.Text);
+                radGridView1.DataSource = res;
+                calcEarn();
+                if (res.Count > 0)
+                {
+                    txt_BuyDate.Text = res[0].storeInputBuyDate.ToString();
+                    txt_Disc.Text = res[0].storeInputDisc.ToString();
+                }
+                else
+                {
+
+                    txt_BuyDate.Text = "";
+                    txt_Disc.Text = "";
+                }
+            }
+            catch
+            {
+
+
+            }
+
+
         }
 
         private void txt_addPercent_Leave(object sender, EventArgs e)
@@ -388,12 +409,94 @@ namespace RonilaAccountingSoftware.myForms
         private void btn_newFactor_Click(object sender, EventArgs e)
         {
             DefineUnits_Load(sender, e);
+            txt_factorNumber.Text = "";
+            radGridView1.DataSource = null;
+
         }
 
         private void btn_addCheck_Click(object sender, EventArgs e)
         {
-            ChakList f=new ChakList();
+            int.TryParse(cbx_Supplier.SelectedValue.ToString(), out int suplierCode);
+            ChakList f = new ChakList(suplierCode, txt_factorNumber.Text);
             f.ShowDialog();
+        }
+
+
+
+        private void cbx_Supplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                int.TryParse(cbx_Supplier.SelectedValue.ToString(), out var SupplierId);
+                var res = _services.GetMaxFactorBySupplier(SupplierId);
+                if (res.Count > 0)
+                {
+                    txt_factorNumber.Text = res[0].storeInputFactorNumber.ToString();
+                    txt_BuyDate.Text = res[0].storeInputBuyDate.ToString();
+                    txt_Disc.Text = res[0].storeInputDisc.ToString();
+                    txt_factorNumber_Leave(sender, e);
+                }
+                else
+                {
+                    txt_factorNumber.Text = "";
+                    txt_BuyDate.Text = "";
+                    txt_Disc.Text = "";
+                }
+            }
+            catch
+            {
+
+
+            }
+        }
+        public void calcEarn()
+        {
+            try
+            {
+
+
+                int.TryParse(cbx_Supplier.SelectedValue.ToString().Trim(), out var SupplierId);
+                var res = _services.factorFinantioalInfo(SupplierId, txt_factorNumber.Text);
+                double.TryParse(res.totalEarn.ToString(), out var totalEarn);
+                lbl_totalEarn.Text = totalEarn.ToString("N0");
+                double.TryParse(res.totalBuy.ToString(), out var totalBuy);
+                lbl_totalBuy.Text = totalBuy.ToString("N0");
+                double.TryParse(res.totalSell.ToString(), out var totalSell);
+                lbl_totalSell.Text = totalSell.ToString("N0");
+
+            }
+            catch
+            {
+
+
+            }
+
+
+        }
+
+        private void txt_shamsiProductionDate_Click(object sender, EventArgs e)
+        {
+            txt_shamsiProductionDate.SelectionStart = 0;
+        }
+
+        private void txt_miladiProductionDate_Click(object sender, EventArgs e)
+        {
+            txt_miladiProductionDate.SelectionStart = 0;
+
+        }
+
+        private void txt_shamsiExpireDate_Click(object sender, EventArgs e)
+        {
+            txt_shamsiExpireDate.SelectionStart = 0;
+
+        }
+
+        private void txt_miladiExpireDate_Click(object sender, EventArgs e)
+        {
+            txt_miladiExpireDate.SelectionStart = 0;
+
         }
     }
 }

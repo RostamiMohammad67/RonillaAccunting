@@ -5,16 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e13e26807b0446039e16b6dd2a16f7ff" Name="Diagram1" DisplayType="true" ShowGrid="true" >
-        <EntityTypeShape EntityType="RonilaDBModel.Login" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.UnitInfo" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="RonilaDBModel.SupplierInfo" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.DefineStore" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.CustomerInfo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.DefineGoodsGroup" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.DefineGood" Width="1.5" PointX="4.75" PointY="2.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="RonilaDBModel.StoreInput" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="RonilaDBModel.DefineBankAccount" Width="2" PointX="4.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RonilaDBModel.StoreInput" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="RonilaDBModel.SupplierInfo" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="RonilaDBModel.DefineBankAccount" Width="1.5" PointX="7.375" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="RonilaDBModel.DefineChakInfo" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RonilaDBModel.Login" Width="1.5" PointX="7.375" PointY="2.75" />
+        <EntityTypeShape EntityType="RonilaDBModel.StoreInfo" Width="1.5" PointX="7.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

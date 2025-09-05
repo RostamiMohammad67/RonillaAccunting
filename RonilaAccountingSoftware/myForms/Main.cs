@@ -90,5 +90,12 @@ namespace RonilaAccountingSoftware.myForms
             f.MdiParent = this;
             f.Show();
         }
+
+        private void menu_storeInfo_Click(object sender, EventArgs e)
+        {
+            StoreInfo f = new StoreInfo();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

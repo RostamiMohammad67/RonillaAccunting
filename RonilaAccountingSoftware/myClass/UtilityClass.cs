@@ -45,7 +45,7 @@ namespace RonilaAccountingSoftware.myClass
                 alert.ContentImage = Properties.Resources.del_24;
 
             }
-            alert.ScreenPosition = AlertScreenPosition.TopRight;
+            alert.ScreenPosition = AlertScreenPosition.BottomRight;
             SystemSounds.Asterisk.Play();
             alert.Show();
         }
@@ -57,7 +57,7 @@ namespace RonilaAccountingSoftware.myClass
             alert.AutoClose = true;
             alert.ContentText = "اطلاعات با موفقیت دخیره شدند";
             alert.ContentImage = Properties.Resources.opts_24;
-            alert.ScreenPosition = AlertScreenPosition.TopRight;
+            alert.ScreenPosition = AlertScreenPosition.BottomRight;
             SystemSounds.Asterisk.Play();
             alert.Show();
         }
@@ -69,7 +69,7 @@ namespace RonilaAccountingSoftware.myClass
             alert.AutoClose = true;
             alert.ContentText = "اطلاعات با موفقیت حذف شدند";
             alert.ContentImage = Properties.Resources.opts_24;
-            alert.ScreenPosition = AlertScreenPosition.TopRight;
+            alert.ScreenPosition = AlertScreenPosition.BottomRight;
             SystemSounds.Asterisk.Play();
             alert.Show();
         }
@@ -81,7 +81,7 @@ namespace RonilaAccountingSoftware.myClass
             alert.AutoClose = true;
             alert.ContentText = "داده ای ذخیره نشد";
             alert.ContentImage = Properties.Resources.del_24;
-            alert.ScreenPosition = AlertScreenPosition.TopRight;
+            alert.ScreenPosition = AlertScreenPosition.BottomRight;
             SystemSounds.Asterisk.Play();
             alert.Show();
         }
@@ -312,7 +312,7 @@ namespace RonilaAccountingSoftware.myClass
         }
         public string AddDate(string mydate, int numToAdd)
         {
-            Shamsi2Miladi(mydate);
+            d=Shamsi2Miladi(mydate);
             d = d.AddDays(Convert.ToInt32(numToAdd));
             System.Globalization.PersianCalendar shamsi = new System.Globalization.PersianCalendar();
             DateTime sh;

@@ -15,7 +15,6 @@ namespace RonilaAccountingSoftware.Models
     public partial class StoreInput
     {
         public int id { get; set; }
-        public Nullable<int> storeInputDocNumber { get; set; }
         public string storeInputFactorNumber { get; set; }
         public Nullable<int> storeInputSupplierCode { get; set; }
         public string storeInputBuyDate { get; set; }

@@ -12,18 +12,14 @@ namespace RonilaAccountingSoftware.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class SupplierInfo
+    public partial class StoreInfo
     {
         public int id { get; set; }
-        public string supplierName { get; set; }
-        public string supplierPhoneNumber { get; set; }
-        public string supplierPhoneNumber2 { get; set; }
-        public string visitorName { get; set; }
-        public string visitorPhoneNumber { get; set; }
-        public string visitorPhoneNumber2 { get; set; }
-        public string supplierAddress { get; set; }
-        public string supplierDisc { get; set; }
-        public string userName { get; set; }
-        public string timeStamp { get; set; }
+        public string storeName { get; set; }
+        public string storeMob { get; set; }
+        public string storePhone { get; set; }
+        public string storeAddress { get; set; }
+        public string storeSlogan { get; set; }
+        public byte[] logo { get; set; }
     }
 }

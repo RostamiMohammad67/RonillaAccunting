@@ -25,7 +25,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="bankName" Type="nvarchar" MaxLength="200" />
           <Property Name="bankCartNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="bankAccountNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -38,8 +38,9 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="chakStoreInputDocNumber" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="storeInputSupplierCode" Type="int" />
+          <Property Name="storeInputFactorNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="chakNumSayadi" Type="nvarchar" MaxLength="50" />
           <Property Name="chakSerial" Type="nvarchar" MaxLength="50" />
           <Property Name="chakPrice" Type="float" />
@@ -102,13 +103,25 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="displayName" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="StoreInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="storeName" Type="nvarchar" MaxLength="200" />
+          <Property Name="storeMob" Type="nvarchar" MaxLength="50" />
+          <Property Name="storePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="storeAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="storeSlogan" Type="nchar" MaxLength="10" />
+          <Property Name="logo" Type="image" />
         </EntityType>
         <EntityType Name="StoreInput">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="storeInputDocNumber" Type="int" />
           <Property Name="storeInputFactorNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="storeInputSupplierCode" Type="int" />
           <Property Name="storeInputBuyDate" Type="nvarchar" MaxLength="50" />
@@ -133,6 +146,10 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="supplierName" Type="nvarchar" MaxLength="250" />
           <Property Name="supplierPhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="supplierPhoneNumber2" Type="nvarchar" MaxLength="50" />
+          <Property Name="visitorName" Type="nvarchar" MaxLength="250" />
+          <Property Name="visitorPhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="visitorPhoneNumber2" Type="nvarchar" MaxLength="50" />
           <Property Name="supplierAddress" Type="nvarchar" MaxLength="500" />
           <Property Name="supplierDisc" Type="nvarchar" MaxLength="1000" />
           <Property Name="userName" Type="nvarchar" MaxLength="50" />
@@ -155,6 +172,7 @@
           <EntitySet Name="DefineGoodsGroup" EntityType="Self.DefineGoodsGroup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DefineStore" EntityType="Self.DefineStore" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StoreInfo" EntityType="Self.StoreInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StoreInput" EntityType="Self.StoreInput" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SupplierInfo" EntityType="Self.SupplierInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UnitInfo" EntityType="Self.UnitInfo" Schema="dbo" store:Type="Tables" />
@@ -164,25 +182,18 @@
     <edmx:ConceptualModels>
       <Schema Namespace="RonilaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="RonilaDBEntities" annotation:LazyLoadingEnabled="true" >
-          <EntitySet Name="Logins" EntityType="RonilaDBModel.Login" />
           <EntitySet Name="UnitInfoes" EntityType="RonilaDBModel.UnitInfo" />
-          <EntitySet Name="SupplierInfoes" EntityType="RonilaDBModel.SupplierInfo" />
           <EntitySet Name="DefineStores" EntityType="RonilaDBModel.DefineStore" />
           <EntitySet Name="CustomerInfoes" EntityType="RonilaDBModel.CustomerInfo" />
           <EntitySet Name="DefineGoodsGroups" EntityType="RonilaDBModel.DefineGoodsGroup" />
           <EntitySet Name="DefineGoods" EntityType="RonilaDBModel.DefineGood" />
           <EntitySet Name="StoreInputs" EntityType="RonilaDBModel.StoreInput" />
+          <EntitySet Name="SupplierInfoes" EntityType="RonilaDBModel.SupplierInfo" />
           <EntitySet Name="DefineBankAccounts" EntityType="RonilaDBModel.DefineBankAccount" />
           <EntitySet Name="DefineChakInfoes" EntityType="RonilaDBModel.DefineChakInfo" />
+          <EntitySet Name="Logins" EntityType="RonilaDBModel.Login" />
+          <EntitySet Name="StoreInfoes" EntityType="RonilaDBModel.StoreInfo" />
         </EntityContainer>
-        <EntityType Name="Login">
-          <Key>
-            <PropertyRef Name="userName" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="UnitInfo">
           <Key>
             <PropertyRef Name="id" />
@@ -191,18 +202,6 @@
           <Property Name="unitName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="SupplierInfo">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="supplierName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="supplierPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="supplierAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="supplierDisc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="DefineStore">
           <Key>
@@ -266,7 +265,6 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="storeInputDocNumber" Type="Int32" />
           <Property Name="storeInputFactorNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="storeInputSupplierCode" Type="Int32" />
           <Property Name="storeInputBuyDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -284,11 +282,27 @@
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="SupplierInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supplierName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="supplierPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="supplierPhoneNumber2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="visitorName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="visitorPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="visitorPhoneNumber2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="supplierAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="supplierDisc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="DefineBankAccount">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="bankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="bankCartNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="bankAccountNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -301,8 +315,9 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="chakStoreInputDocNumber" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="storeInputSupplierCode" Type="Int32" />
+          <Property Name="storeInputFactorNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="chakNumSayadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="chakSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="chakPrice" Type="Double" />
@@ -317,40 +332,39 @@
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="timeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="userName" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="displayName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StoreInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="storeName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="storeMob" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="storePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="storeAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="storeSlogan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="RonilaDBModelStoreContainer" CdmEntityContainer="RonilaDBEntities" >
-          <EntitySetMapping Name="Logins">
-            <EntityTypeMapping TypeName="RonilaDBModel.Login">
-              <MappingFragment StoreEntitySet="Login">
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="userName" ColumnName="userName" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="UnitInfoes">
             <EntityTypeMapping TypeName="RonilaDBModel.UnitInfo">
               <MappingFragment StoreEntitySet="UnitInfo">
                 <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
                 <ScalarProperty Name="unitName" ColumnName="unitName" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SupplierInfoes">
-            <EntityTypeMapping TypeName="RonilaDBModel.SupplierInfo">
-              <MappingFragment StoreEntitySet="SupplierInfo">
-                <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
-                <ScalarProperty Name="userName" ColumnName="userName" />
-                <ScalarProperty Name="supplierDisc" ColumnName="supplierDisc" />
-                <ScalarProperty Name="supplierAddress" ColumnName="supplierAddress" />
-                <ScalarProperty Name="supplierPhoneNumber" ColumnName="supplierPhoneNumber" />
-                <ScalarProperty Name="supplierName" ColumnName="supplierName" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -435,7 +449,23 @@
                 <ScalarProperty Name="storeInputBuyDate" ColumnName="storeInputBuyDate" />
                 <ScalarProperty Name="storeInputSupplierCode" ColumnName="storeInputSupplierCode" />
                 <ScalarProperty Name="storeInputFactorNumber" ColumnName="storeInputFactorNumber" />
-                <ScalarProperty Name="storeInputDocNumber" ColumnName="storeInputDocNumber" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SupplierInfoes">
+            <EntityTypeMapping TypeName="RonilaDBModel.SupplierInfo">
+              <MappingFragment StoreEntitySet="SupplierInfo">
+                <ScalarProperty Name="timeStamp" ColumnName="timeStamp" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="supplierDisc" ColumnName="supplierDisc" />
+                <ScalarProperty Name="supplierAddress" ColumnName="supplierAddress" />
+                <ScalarProperty Name="visitorPhoneNumber2" ColumnName="visitorPhoneNumber2" />
+                <ScalarProperty Name="visitorPhoneNumber" ColumnName="visitorPhoneNumber" />
+                <ScalarProperty Name="visitorName" ColumnName="visitorName" />
+                <ScalarProperty Name="supplierPhoneNumber2" ColumnName="supplierPhoneNumber2" />
+                <ScalarProperty Name="supplierPhoneNumber" ColumnName="supplierPhoneNumber" />
+                <ScalarProperty Name="supplierName" ColumnName="supplierName" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -470,7 +500,31 @@
                 <ScalarProperty Name="chakPrice" ColumnName="chakPrice" />
                 <ScalarProperty Name="chakSerial" ColumnName="chakSerial" />
                 <ScalarProperty Name="chakNumSayadi" ColumnName="chakNumSayadi" />
-                <ScalarProperty Name="chakStoreInputDocNumber" ColumnName="chakStoreInputDocNumber" />
+                <ScalarProperty Name="storeInputFactorNumber" ColumnName="storeInputFactorNumber" />
+                <ScalarProperty Name="storeInputSupplierCode" ColumnName="storeInputSupplierCode" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="RonilaDBModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="displayName" ColumnName="displayName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StoreInfoes">
+            <EntityTypeMapping TypeName="RonilaDBModel.StoreInfo">
+              <MappingFragment StoreEntitySet="StoreInfo">
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="storeSlogan" ColumnName="storeSlogan" />
+                <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+                <ScalarProperty Name="storePhone" ColumnName="storePhone" />
+                <ScalarProperty Name="storeMob" ColumnName="storeMob" />
+                <ScalarProperty Name="storeName" ColumnName="storeName" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

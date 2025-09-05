@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.Svg;
+using Telerik.WinControls.UI;
 using Telerik.WinControls.UI.ImageEditor.Dialogs;
 
 namespace RonilaAccountingSoftware.Models.DBServices
@@ -36,7 +38,7 @@ namespace RonilaAccountingSoftware.Models.DBServices
             if (info.Count > 0)
             {
 
-                info[0].storeInputDocNumber = data.storeInputDocNumber;
+
                 info[0].storeInputFactorNumber = data.storeInputFactorNumber;
                 info[0].storeInputSupplierCode = data.storeInputSupplierCode;
                 info[0].storeInputBuyDate = data.storeInputBuyDate;
@@ -63,6 +65,7 @@ namespace RonilaAccountingSoftware.Models.DBServices
                 return false;
             }
         }
+
         public bool deleteData(int id)
         {
             var info = db.StoreInputs.Where(x => x.id == id).ToList();
@@ -89,7 +92,7 @@ namespace RonilaAccountingSoftware.Models.DBServices
                     select new StoreInputDtO
                     {
                         id = s.id,
-                        storeInputDocNumber = s.storeInputDocNumber,
+
                         storeInputFactorNumber = s.storeInputFactorNumber,
                         storeInputSupplierCode = s.storeInputSupplierCode,
                         storeInputBuyDate = s.storeInputBuyDate,
@@ -121,7 +124,7 @@ namespace RonilaAccountingSoftware.Models.DBServices
                     select new StoreInputDtO
                     {
                         id = s.id,
-                        storeInputDocNumber = s.storeInputDocNumber,
+
                         storeInputFactorNumber = s.storeInputFactorNumber,
                         storeInputSupplierCode = s.storeInputSupplierCode,
                         storeInputBuyDate = s.storeInputBuyDate,
@@ -143,18 +146,19 @@ namespace RonilaAccountingSoftware.Models.DBServices
                         goodsName = g.goodsName
 
                     }).ToList();
-        
+
         }
-        public List<StoreInputDtO> getDataByDocNumber(int storeInputDocNumber)
+
+        public List<StoreInputDtO> getDataBySupplier(int SupplierCode)
         {
             return (from s in db.StoreInputs
                     join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
                     join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
-                    where s.storeInputDocNumber == storeInputDocNumber
+                    where s.storeInputSupplierCode == SupplierCode
                     select new StoreInputDtO
                     {
                         id = s.id,
-                        storeInputDocNumber = s.storeInputDocNumber,
+
                         storeInputFactorNumber = s.storeInputFactorNumber,
                         storeInputSupplierCode = s.storeInputSupplierCode,
                         storeInputBuyDate = s.storeInputBuyDate,
@@ -176,18 +180,18 @@ namespace RonilaAccountingSoftware.Models.DBServices
                         goodsName = g.goodsName
 
                     }).ToList();
-           // return db.StoreInputs.Where(x => x.storeInputDocNumber == docNumber).ToList();
+            //return db.StoreInputs.Where(x => x.storeInputSupplierCode == SupplierCode && x.storeInputFactorNumber == factorNumber).ToList();
         }
         public List<StoreInputDtO> getDataBySupplierFactorNumber(int SupplierCode, string factorNumber)
         {
             return (from s in db.StoreInputs
                     join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
                     join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
-                    where s.storeInputSupplierCode == SupplierCode && s.storeInputFactorNumber== factorNumber
+                    where s.storeInputSupplierCode == SupplierCode && s.storeInputFactorNumber == factorNumber
                     select new StoreInputDtO
                     {
                         id = s.id,
-                        storeInputDocNumber = s.storeInputDocNumber,
+
                         storeInputFactorNumber = s.storeInputFactorNumber,
                         storeInputSupplierCode = s.storeInputSupplierCode,
                         storeInputBuyDate = s.storeInputBuyDate,
@@ -216,11 +220,11 @@ namespace RonilaAccountingSoftware.Models.DBServices
             return (from s in db.StoreInputs
                     join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
                     join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
-                    where s.storeInputGoodsCode == GoodsCode 
+                    where s.storeInputGoodsCode == GoodsCode
                     select new StoreInputDtO
                     {
                         id = s.id,
-                        storeInputDocNumber = s.storeInputDocNumber,
+
                         storeInputFactorNumber = s.storeInputFactorNumber,
                         storeInputSupplierCode = s.storeInputSupplierCode,
                         storeInputBuyDate = s.storeInputBuyDate,
@@ -244,16 +248,16 @@ namespace RonilaAccountingSoftware.Models.DBServices
                     }).ToList();
             //return db.StoreInputs.Where(x => x.storeInputGoodsCode == GoodsCode).ToList();
         }
-        public List<StoreInputDtO> getDataByDate(string start_date,string endDate)
+        public List<StoreInputDtO> getDataByDate(string start_date, string endDate)
         {
             return (from s in db.StoreInputs
                     join g in db.DefineGoods on s.storeInputGoodsCode equals g.goodsCode
                     join Sup in db.SupplierInfoes on s.storeInputSupplierCode equals Sup.id
-                    where (s.storeInputBuyDate.CompareTo(start_date)>=0 && s.storeInputBuyDate.CompareTo(endDate) <= 0)
+                    where (s.storeInputBuyDate.CompareTo(start_date) >= 0 && s.storeInputBuyDate.CompareTo(endDate) <= 0)
                     select new StoreInputDtO
                     {
                         id = s.id,
-                        storeInputDocNumber = s.storeInputDocNumber,
+
                         storeInputFactorNumber = s.storeInputFactorNumber,
                         storeInputSupplierCode = s.storeInputSupplierCode,
                         storeInputBuyDate = s.storeInputBuyDate,
@@ -282,15 +286,35 @@ namespace RonilaAccountingSoftware.Models.DBServices
             int.TryParse(db.StoreInputs.Select(x => (int?)x.id).Max().GetValueOrDefault().ToString(), out var maxValue);
             return maxValue;
         }
-        public int GetMaxDocNumber()
-        {
-            int.TryParse(db.StoreInputs.Select(x => (int?)x.storeInputDocNumber).Max().GetValueOrDefault().ToString(), out var maxValue);
-            return maxValue;
-        }
+
         public int GetMaxIdBySupplier(int SupplierID)
         {
             int.TryParse(db.StoreInputs.Where(x => x.storeInputSupplierCode == SupplierID).Select(x => (int?)x.id).Max().GetValueOrDefault().ToString(), out var maxValue);
             return maxValue;
+        }
+        /// <summary>
+        /// اطلاعات آخرین فاکتور را بر اساس فروشنده می دهد
+        /// </summary>
+        /// <param name="SupplierID"></param>
+        /// <returns></returns>
+        public List<Models.StoreInput> GetMaxFactorBySupplier(int SupplierID)
+        {
+            int.TryParse(db.StoreInputs.Where(x => x.storeInputSupplierCode == SupplierID).Select(x => (int?)x.id).Max().GetValueOrDefault().ToString(), out var MaxcIDBySupplier);
+            var res = db.StoreInputs.Where(x => x.id == MaxcIDBySupplier).ToList();
+            return res;
+        }
+        public (double? totalBuy, double? totalSell, double? totalEarn) factorFinantioalInfo(int supplierCode, string factorNumber)
+        {
+            var res = (from a in db.StoreInputs
+                       where a.storeInputSupplierCode == supplierCode && a.storeInputFactorNumber == factorNumber
+                       group a by new { a.storeInputFactorNumber, a.storeInputSupplierCode } into g
+                       select new
+                       {
+                           totalBuy = g.Sum(x => x.storeInputBuyPrice*x.storeInputCount),
+                           totalSell = g.Sum(x => x.storeInputSellPrice * x.storeInputCount),
+                           totalEarn = g.Sum(x => x.storeInputSellPrice * x.storeInputCount) - g.Sum(x => x.storeInputBuyPrice * x.storeInputCount )
+                       }).FirstOrDefault();
+            return (res.totalBuy, res.totalSell, res.totalEarn);
         }
     }
 }

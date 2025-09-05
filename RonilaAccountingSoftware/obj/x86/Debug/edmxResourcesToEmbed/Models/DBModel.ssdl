@@ -20,7 +20,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="bankName" Type="nvarchar" MaxLength="200" />
     <Property Name="bankCartNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="bankAccountNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -33,8 +33,9 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
-    <Property Name="chakStoreInputDocNumber" Type="int" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storeInputSupplierCode" Type="int" />
+    <Property Name="storeInputFactorNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="chakNumSayadi" Type="nvarchar" MaxLength="50" />
     <Property Name="chakSerial" Type="nvarchar" MaxLength="50" />
     <Property Name="chakPrice" Type="float" />
@@ -97,13 +98,25 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="displayName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="StoreInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storeName" Type="nvarchar" MaxLength="200" />
+    <Property Name="storeMob" Type="nvarchar" MaxLength="50" />
+    <Property Name="storePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="storeAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="storeSlogan" Type="nchar" MaxLength="10" />
+    <Property Name="logo" Type="image" />
   </EntityType>
   <EntityType Name="StoreInput">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="storeInputDocNumber" Type="int" />
     <Property Name="storeInputFactorNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="storeInputSupplierCode" Type="int" />
     <Property Name="storeInputBuyDate" Type="nvarchar" MaxLength="50" />
@@ -128,6 +141,10 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="supplierName" Type="nvarchar" MaxLength="250" />
     <Property Name="supplierPhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="supplierPhoneNumber2" Type="nvarchar" MaxLength="50" />
+    <Property Name="visitorName" Type="nvarchar" MaxLength="250" />
+    <Property Name="visitorPhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="visitorPhoneNumber2" Type="nvarchar" MaxLength="50" />
     <Property Name="supplierAddress" Type="nvarchar" MaxLength="500" />
     <Property Name="supplierDisc" Type="nvarchar" MaxLength="1000" />
     <Property Name="userName" Type="nvarchar" MaxLength="50" />
@@ -150,6 +167,7 @@
     <EntitySet Name="DefineGoodsGroup" EntityType="Self.DefineGoodsGroup" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DefineStore" EntityType="Self.DefineStore" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoreInfo" EntityType="Self.StoreInfo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StoreInput" EntityType="Self.StoreInput" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SupplierInfo" EntityType="Self.SupplierInfo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UnitInfo" EntityType="Self.UnitInfo" Schema="dbo" store:Type="Tables" />

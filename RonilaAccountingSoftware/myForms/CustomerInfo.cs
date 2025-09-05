@@ -197,7 +197,7 @@ namespace RonilaAccountingSoftware.myForms
         {
             CustomerList f = new CustomerList();
             f.ShowDialog();
-            lbl_customerName.Text = UtilityClass.Help_code1;
+            txt_Reagent.Text = UtilityClass.Help_code1;
         }
 
         private void txt_Reagent_TextChanged(object sender, EventArgs e)

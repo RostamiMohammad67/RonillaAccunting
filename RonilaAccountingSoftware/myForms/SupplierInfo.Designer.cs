@@ -34,6 +34,10 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2022LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2022LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -50,6 +54,14 @@
             this.btn_save = new Telerik.WinControls.UI.RadButton();
             this.btn_delete = new Telerik.WinControls.UI.RadButton();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.txt_visitorphoneNumber = new Telerik.WinControls.UI.RadTextBox();
+            this.txt_visitorphoneName = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.txt_phoneNumber2 = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.txt_visitorphoneNumber2 = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
@@ -66,17 +78,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_visitorphoneNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_visitorphoneName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_phoneNumber2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_visitorphoneNumber2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.radLabel8);
+            this.radGroupBox1.Controls.Add(this.txt_visitorphoneNumber2);
+            this.radGroupBox1.Controls.Add(this.radLabel7);
+            this.radGroupBox1.Controls.Add(this.txt_phoneNumber2);
             this.radGroupBox1.Controls.Add(this.radLabel4);
+            this.radGroupBox1.Controls.Add(this.txt_disc);
+            this.radGroupBox1.Controls.Add(this.radLabel5);
+            this.radGroupBox1.Controls.Add(this.radLabel6);
+            this.radGroupBox1.Controls.Add(this.txt_visitorphoneNumber);
+            this.radGroupBox1.Controls.Add(this.txt_visitorphoneName);
             this.radGroupBox1.Controls.Add(this.radLabel3);
             this.radGroupBox1.Controls.Add(this.radLabel2);
             this.radGroupBox1.Controls.Add(this.radLabel1);
-            this.radGroupBox1.Controls.Add(this.txt_disc);
             this.radGroupBox1.Controls.Add(this.txt_address);
             this.radGroupBox1.Controls.Add(this.txt_phoneNumber);
             this.radGroupBox1.Controls.Add(this.btn_refresh);
@@ -90,7 +118,7 @@
             this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGroupBox1.Size = new System.Drawing.Size(988, 149);
+            this.radGroupBox1.Size = new System.Drawing.Size(988, 188);
             this.radGroupBox1.TabIndex = 3;
             this.radGroupBox1.Text = "ورود اطلاعات";
             this.radGroupBox1.ThemeName = "VisualStudio2022Light";
@@ -98,16 +126,17 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radLabel4.Location = new System.Drawing.Point(905, 67);
+            this.radLabel4.Location = new System.Drawing.Point(530, 111);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(56, 18);
             this.radLabel4.TabIndex = 11;
             this.radLabel4.Text = "توضیحات:";
+            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel4.ThemeName = "VisualStudio2022Light";
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(354, 28);
+            this.radLabel3.Location = new System.Drawing.Point(905, 110);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(41, 21);
             this.radLabel3.TabIndex = 10;
@@ -117,16 +146,16 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(611, 26);
+            this.radLabel2.Location = new System.Drawing.Point(530, 26);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(80, 21);
+            this.radLabel2.Size = new System.Drawing.Size(47, 21);
             this.radLabel2.TabIndex = 9;
-            this.radLabel2.Text = "شماره تماس:";
+            this.radLabel2.Text = "موبایل:";
             this.radLabel2.ThemeName = "VisualStudio2022Light";
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(904, 26);
+            this.radLabel1.Location = new System.Drawing.Point(905, 26);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(78, 21);
             this.radLabel1.TabIndex = 8;
@@ -136,27 +165,27 @@
             // txt_disc
             // 
             this.txt_disc.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_disc.Location = new System.Drawing.Point(11, 67);
+            this.txt_disc.Location = new System.Drawing.Point(6, 108);
             this.txt_disc.Name = "txt_disc";
-            this.txt_disc.Size = new System.Drawing.Size(893, 23);
-            this.txt_disc.TabIndex = 3;
+            this.txt_disc.Size = new System.Drawing.Size(518, 23);
+            this.txt_disc.TabIndex = 7;
             this.txt_disc.ThemeName = "VisualStudio2022Light";
             this.txt_disc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_disc_KeyDown);
             // 
             // txt_address
             // 
             this.txt_address.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_address.Location = new System.Drawing.Point(11, 26);
+            this.txt_address.Location = new System.Drawing.Point(623, 108);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(337, 23);
-            this.txt_address.TabIndex = 2;
+            this.txt_address.Size = new System.Drawing.Size(277, 23);
+            this.txt_address.TabIndex = 6;
             this.txt_address.ThemeName = "VisualStudio2022Light";
             this.txt_address.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_disc_KeyDown);
             // 
             // txt_phoneNumber
             // 
             this.txt_phoneNumber.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_phoneNumber.Location = new System.Drawing.Point(403, 26);
+            this.txt_phoneNumber.Location = new System.Drawing.Point(322, 26);
             this.txt_phoneNumber.Name = "txt_phoneNumber";
             this.txt_phoneNumber.Size = new System.Drawing.Size(202, 23);
             this.txt_phoneNumber.TabIndex = 1;
@@ -168,10 +197,10 @@
             this.btn_refresh.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_refresh.Image = global::RonilaAccountingSoftware.Properties.Resources.refresh;
             this.btn_refresh.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_refresh.Location = new System.Drawing.Point(303, 110);
+            this.btn_refresh.Location = new System.Drawing.Point(303, 149);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(92, 30);
-            this.btn_refresh.TabIndex = 7;
+            this.btn_refresh.TabIndex = 11;
             this.btn_refresh.Text = "رفرش";
             this.btn_refresh.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_refresh.ThemeName = "VisualStudio2022Light";
@@ -180,9 +209,9 @@
             // txt_name
             // 
             this.txt_name.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_name.Location = new System.Drawing.Point(698, 26);
+            this.txt_name.Location = new System.Drawing.Point(623, 26);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(202, 23);
+            this.txt_name.Size = new System.Drawing.Size(277, 23);
             this.txt_name.TabIndex = 0;
             this.txt_name.ThemeName = "VisualStudio2022Light";
             this.txt_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_disc_KeyDown);
@@ -193,10 +222,10 @@
             this.btn_edit.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_edit.Image = global::RonilaAccountingSoftware.Properties.Resources.edit;
             this.btn_edit.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_edit.Location = new System.Drawing.Point(107, 110);
+            this.btn_edit.Location = new System.Drawing.Point(107, 149);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(92, 30);
-            this.btn_edit.TabIndex = 5;
+            this.btn_edit.TabIndex = 9;
             this.btn_edit.Text = "ویرایش";
             this.btn_edit.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_edit.ThemeName = "VisualStudio2022Light";
@@ -207,10 +236,10 @@
             this.btn_save.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_save.Image = global::RonilaAccountingSoftware.Properties.Resources.save;
             this.btn_save.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_save.Location = new System.Drawing.Point(205, 110);
+            this.btn_save.Location = new System.Drawing.Point(205, 149);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(92, 30);
-            this.btn_save.TabIndex = 4;
+            this.btn_save.TabIndex = 8;
             this.btn_save.Text = "ثبت";
             this.btn_save.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_save.ThemeName = "VisualStudio2022Light";
@@ -222,10 +251,10 @@
             this.btn_delete.Font = new System.Drawing.Font("Tahoma", 9F);
             this.btn_delete.Image = global::RonilaAccountingSoftware.Properties.Resources.delete;
             this.btn_delete.ImageAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_delete.Location = new System.Drawing.Point(11, 110);
+            this.btn_delete.Location = new System.Drawing.Point(11, 149);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(92, 30);
-            this.btn_delete.TabIndex = 6;
+            this.btn_delete.TabIndex = 10;
             this.btn_delete.Text = "حذف";
             this.btn_delete.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.ThemeName = "VisualStudio2022Light";
@@ -238,7 +267,7 @@
             this.radGridView1.Font = new System.Drawing.Font("Tahoma", 9F);
             this.radGridView1.ForeColor = System.Drawing.Color.Black;
             this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(12, 167);
+            this.radGridView1.Location = new System.Drawing.Point(12, 206);
             // 
             // 
             // 
@@ -262,45 +291,145 @@
             gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn3.Width = 200;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "supplierAddress";
-            gridViewTextBoxColumn4.HeaderText = "آدرس تامین کننده";
-            gridViewTextBoxColumn4.Name = "supplierAddress";
+            gridViewTextBoxColumn4.FieldName = "supplierPhoneNumber2";
+            gridViewTextBoxColumn4.HeaderText = "شماره ثابت";
+            gridViewTextBoxColumn4.Name = "supplierPhoneNumber2";
             gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn4.Width = 300;
+            gridViewTextBoxColumn4.Width = 150;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "supplierDisc";
-            gridViewTextBoxColumn5.HeaderText = "توضیحات";
-            gridViewTextBoxColumn5.Name = "supplierDisc";
+            gridViewTextBoxColumn5.FieldName = "visitorName";
+            gridViewTextBoxColumn5.HeaderText = "ویزیتور";
+            gridViewTextBoxColumn5.Name = "visitorName";
             gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn5.Width = 300;
+            gridViewTextBoxColumn5.Width = 200;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "userName";
-            gridViewTextBoxColumn6.HeaderText = "تاریخ ثبت";
-            gridViewTextBoxColumn6.Name = "timeStamp";
+            gridViewTextBoxColumn6.FieldName = "visitorPhoneNumber";
+            gridViewTextBoxColumn6.HeaderText = "شماره موبایل";
+            gridViewTextBoxColumn6.Name = "visitorPhoneNumber";
             gridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn6.Width = 100;
+            gridViewTextBoxColumn6.Width = 150;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "visitorPhoneNumber2";
+            gridViewTextBoxColumn7.HeaderText = "شماره ثابت ویزیتور";
+            gridViewTextBoxColumn7.Name = "visitorPhoneNumber2";
+            gridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn7.Width = 150;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "supplierAddress";
+            gridViewTextBoxColumn8.HeaderText = "آدرس تامین کننده";
+            gridViewTextBoxColumn8.Name = "supplierAddress";
+            gridViewTextBoxColumn8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn8.Width = 300;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "supplierDisc";
+            gridViewTextBoxColumn9.HeaderText = "توضیحات";
+            gridViewTextBoxColumn9.Name = "supplierDisc";
+            gridViewTextBoxColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn9.Width = 300;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "userName";
+            gridViewTextBoxColumn10.HeaderText = "تاریخ ثبت";
+            gridViewTextBoxColumn10.Name = "timeStamp";
+            gridViewTextBoxColumn10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn10.Width = 100;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
             gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10});
             this.radGridView1.MasterTemplate.EnableFiltering = true;
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGridView1.Size = new System.Drawing.Size(988, 336);
+            this.radGridView1.Size = new System.Drawing.Size(988, 326);
             this.radGridView1.TabIndex = 4;
             this.radGridView1.ThemeName = "VisualStudio2022Light";
             this.radGridView1.DoubleClick += new System.EventHandler(this.radGridView1_DoubleClick);
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Location = new System.Drawing.Point(530, 68);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(47, 21);
+            this.radLabel5.TabIndex = 15;
+            this.radLabel5.Text = "موبایل:";
+            this.radLabel5.ThemeName = "VisualStudio2022Light";
+            // 
+            // radLabel6
+            // 
+            this.radLabel6.Location = new System.Drawing.Point(905, 68);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(71, 21);
+            this.radLabel6.TabIndex = 14;
+            this.radLabel6.Text = "نام ویزیتور:";
+            this.radLabel6.ThemeName = "VisualStudio2022Light";
+            // 
+            // txt_visitorphoneNumber
+            // 
+            this.txt_visitorphoneNumber.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_visitorphoneNumber.Location = new System.Drawing.Point(322, 68);
+            this.txt_visitorphoneNumber.Name = "txt_visitorphoneNumber";
+            this.txt_visitorphoneNumber.Size = new System.Drawing.Size(202, 23);
+            this.txt_visitorphoneNumber.TabIndex = 4;
+            this.txt_visitorphoneNumber.ThemeName = "VisualStudio2022Light";
+            // 
+            // txt_visitorphoneName
+            // 
+            this.txt_visitorphoneName.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_visitorphoneName.Location = new System.Drawing.Point(623, 68);
+            this.txt_visitorphoneName.Name = "txt_visitorphoneName";
+            this.txt_visitorphoneName.Size = new System.Drawing.Size(277, 23);
+            this.txt_visitorphoneName.TabIndex = 3;
+            this.txt_visitorphoneName.ThemeName = "VisualStudio2022Light";
+            // 
+            // radLabel7
+            // 
+            this.radLabel7.Location = new System.Drawing.Point(217, 26);
+            this.radLabel7.Name = "radLabel7";
+            this.radLabel7.Size = new System.Drawing.Size(73, 21);
+            this.radLabel7.TabIndex = 17;
+            this.radLabel7.Text = "شماره ثابت:";
+            this.radLabel7.ThemeName = "VisualStudio2022Light";
+            // 
+            // txt_phoneNumber2
+            // 
+            this.txt_phoneNumber2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_phoneNumber2.Location = new System.Drawing.Point(9, 26);
+            this.txt_phoneNumber2.Name = "txt_phoneNumber2";
+            this.txt_phoneNumber2.Size = new System.Drawing.Size(202, 23);
+            this.txt_phoneNumber2.TabIndex = 2;
+            this.txt_phoneNumber2.ThemeName = "VisualStudio2022Light";
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Location = new System.Drawing.Point(217, 66);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(73, 21);
+            this.radLabel8.TabIndex = 19;
+            this.radLabel8.Text = "شماره ثابت:";
+            this.radLabel8.ThemeName = "VisualStudio2022Light";
+            // 
+            // txt_visitorphoneNumber2
+            // 
+            this.txt_visitorphoneNumber2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_visitorphoneNumber2.Location = new System.Drawing.Point(9, 66);
+            this.txt_visitorphoneNumber2.Name = "txt_visitorphoneNumber2";
+            this.txt_visitorphoneNumber2.Size = new System.Drawing.Size(202, 23);
+            this.txt_visitorphoneNumber2.TabIndex = 5;
+            this.txt_visitorphoneNumber2.ThemeName = "VisualStudio2022Light";
             // 
             // SupplierInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 515);
+            this.ClientSize = new System.Drawing.Size(1012, 558);
             this.Controls.Add(this.radGridView1);
             this.Controls.Add(this.radGroupBox1);
             this.MaximizeBox = false;
@@ -328,6 +457,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_visitorphoneNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_visitorphoneName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_phoneNumber2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_visitorphoneNumber2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -350,5 +487,13 @@
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadLabel radLabel8;
+        private Telerik.WinControls.UI.RadTextBox txt_visitorphoneNumber2;
+        private Telerik.WinControls.UI.RadLabel radLabel7;
+        private Telerik.WinControls.UI.RadTextBox txt_phoneNumber2;
+        private Telerik.WinControls.UI.RadLabel radLabel5;
+        private Telerik.WinControls.UI.RadLabel radLabel6;
+        private Telerik.WinControls.UI.RadTextBox txt_visitorphoneNumber;
+        private Telerik.WinControls.UI.RadTextBox txt_visitorphoneName;
     }
 }

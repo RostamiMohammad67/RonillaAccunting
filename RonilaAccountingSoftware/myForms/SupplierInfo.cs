@@ -53,6 +53,10 @@ namespace RonilaAccountingSoftware.myForms
             {
                 supplierName = txt_name.Text,
                 supplierPhoneNumber = txt_phoneNumber.Text,
+                supplierPhoneNumber2 = txt_phoneNumber2.Text,
+                visitorName =txt_visitorphoneName.Text,
+                visitorPhoneNumber = txt_visitorphoneNumber2.Text,
+                visitorPhoneNumber2 = txt_visitorphoneNumber2.Text,
                 supplierAddress = txt_address.Text,
                 supplierDisc = txt_disc.Text,
                 timeStamp = fun.TimeStamp(),
@@ -126,6 +130,10 @@ namespace RonilaAccountingSoftware.myForms
                 txt_phoneNumber.Text = radGridView1.CurrentRow.Cells["supplierPhoneNumber"].Value.ToString();
                 txt_address.Text = radGridView1.CurrentRow.Cells["supplierAddress"].Value.ToString();
                 txt_disc.Text = radGridView1.CurrentRow.Cells["supplierDisc"].Value.ToString();
+                txt_phoneNumber2.Text = radGridView1.CurrentRow.Cells["supplierPhoneNumber2"].Value.ToString();
+                txt_visitorphoneName.Text = radGridView1.CurrentRow.Cells["visitorName"].Value.ToString();
+                txt_visitorphoneNumber.Text = radGridView1.CurrentRow.Cells["visitorPhoneNumber"].Value.ToString();
+                txt_visitorphoneNumber2.Text = radGridView1.CurrentRow.Cells["visitorPhoneNumber2"].Value.ToString();
                 btn_delete.Enabled = btn_edit.Enabled = true;
                 btn_save.Enabled = false;
             }

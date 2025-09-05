@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\chaklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\chaklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\chaklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\chaklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\storeinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\supplierinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\supplierinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|e:\\mohammad\\accounting\\ronilaaccountingsoftware\\myforms\\definegoods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAAB52A6-138B-43F3-AAA2-79A6B3D459F4}|RonilaAccountingSoftware.csproj|solutionrelative:myforms\\definegoods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,46 +26,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 400,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChakList.cs [Design]",
-              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\ChakList.cs",
-              "RelativeDocumentMoniker": "myForms\\ChakList.cs",
-              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\ChakList.cs [Design]",
-              "RelativeToolTip": "myForms\\ChakList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T17:58:56.638Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SupplierInfo.cs [Design]",
-              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\SupplierInfo.cs",
-              "RelativeDocumentMoniker": "myForms\\SupplierInfo.cs",
-              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\SupplierInfo.cs [Design]",
-              "RelativeToolTip": "myForms\\SupplierInfo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:21:03.469Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChakList.cs",
-              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\ChakList.cs",
-              "RelativeDocumentMoniker": "myForms\\ChakList.cs",
-              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\ChakList.cs",
-              "RelativeToolTip": "myForms\\ChakList.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwEEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:20:26.495Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -81,26 +39,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StoreInput.cs",
-              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs",
-              "RelativeDocumentMoniker": "myForms\\StoreInput.cs",
-              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs",
-              "RelativeToolTip": "myForms\\StoreInput.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBUAAABFAAAAAAAAAA==",
+              "Title": "StoreInfo.Designer.cs",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInfo.Designer.cs",
+              "RelativeDocumentMoniker": "myForms\\StoreInfo.Designer.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInfo.Designer.cs*",
+              "RelativeToolTip": "myForms\\StoreInfo.Designer.cs*",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAAwEsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:18:23.743Z",
+              "WhenOpened": "2025-09-05T20:51:38.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StoreInfo.cs",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInfo.cs",
+              "RelativeDocumentMoniker": "myForms\\StoreInfo.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInfo.cs*",
+              "RelativeToolTip": "myForms\\StoreInfo.cs*",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAwwH8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T20:48:44.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StoreInput.cs [Design]",
-              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs",
-              "RelativeDocumentMoniker": "myForms\\StoreInput.cs",
-              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInput.cs [Design]",
-              "RelativeToolTip": "myForms\\StoreInput.cs [Design]",
+              "Title": "DefineGoods.cs",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\DefineGoods.cs",
+              "RelativeDocumentMoniker": "myForms\\DefineGoods.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\DefineGoods.cs",
+              "RelativeToolTip": "myForms\\DefineGoods.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAtwBkBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T19:18:20.391Z",
+              "WhenOpened": "2025-09-05T20:48:31.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StoreInfo.cs [Design]",
+              "DocumentMoniker": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInfo.cs",
+              "RelativeDocumentMoniker": "myForms\\StoreInfo.cs",
+              "ToolTip": "E:\\Mohammad\\Accounting\\RonilaAccountingSoftware\\myForms\\StoreInfo.cs [Design]*",
+              "RelativeToolTip": "myForms\\StoreInfo.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T20:06:59.743Z",
               "EditorCaption": " [Design]"
             }
           ]
